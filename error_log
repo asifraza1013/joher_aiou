@@ -1,0 +1,2 @@
+[15-May-2021 14:00:08 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in /home/joheraio/public_html/joher/app/Http/Controllers/front.php on line 3
+[15-May-2021 14:00:32 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\front::practice() in /home/joheraio/public_html/joher/app/Http/Controllers/front.php on line 122
