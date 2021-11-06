@@ -32,6 +32,40 @@
                     <img src="{{ asset('img/about-us.jpg') }}" alt="Edua">
                 </div>
             </div>
+            <div class="col-md-12 wow fadeInLeft" data-wow-delay="300ms">
+                <div class="card p-4 mt-3">
+                    <div class="card-header">
+                        <h2 class="heading heading_space text-upercase">Keep in Touch<span class="divider-left"></span></h2>
+                    </div>
+                    <div class="body">
+                        <div class="row p-2">
+                            <div class="icon_wrap padding-bottom-half clearfix">
+                                <a href="https://youtube.com/channel/UCaOu2WbAoxRpM596YtRcvvg">
+                                    <div class="col-sm-4 col-xs-4 col-lg-4 icon_box text-center heading_space wow fadeInUp" data-wow-delay="300ms">
+                                        <i class="fa fa-youtube"></i>
+                                        <h4 class="text-capitalize bottom20 margin10">Joher Videos</h4>
+                                        <p>Click Here to get Youtube Videos</p>
+                                    </div>
+                                </a>
+                                <a href="{{ route('front.lms.portal.tab') }}">
+                                <div class="col-sm-4 col-lg-4 icon_box text-center heading_space wow fadeInUp" data-wow-delay="400ms">
+                                    <i class="fa fa-facebook"></i>
+                                    <h4 class="text-capitalize bottom20 margin10">Joher AIOU</h4>
+                                    <p>Click Here to get facebook Page</p>
+                                </div>
+                                </a>
+                                <a href="#">
+                                <div class="col-sm-4 col-lg-4 icon_box text-center heading_space wow fadeInUp" data-wow-delay="400ms">
+                                    <i class="fa fa-whatsapp"></i>
+                                    <h4 class="text-capitalize bottom20 margin10">Whatsapp</h4>
+                                    <p>0316-4962025 / 0313-0905455</p>
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>

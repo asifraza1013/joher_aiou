@@ -10,9 +10,9 @@
                 </a>
                 <p>We give proper guidance and counselling through this platforms. And in this website we give free of cost All Programs solve Original Books, Key Books, Solve Assignment, and complete Videos tutorials about from taking Admission to get degree from university.</p>
                 <ul class="social_icon top25">
-                    <li><a href="#." class="facebook"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://www.facebook.com/AIOUStudentsandTutorsHelpDesk/" class="facebook"><i class="fa fa-facebook"></i></a></li>
                     <li><a href="#." class="twitter"><i class="icon-twitter4"></i></a></li>
-                    <li><a href="#." class="dribble"><i class="icon-dribbble5"></i></a></li>
+                    <li><a href="https://youtube.com/channel/UCaOu2WbAoxRpM596YtRcvvg" class="dribble"><i class="fa fa-youtubse"></i></a></li>
                     <li><a href="#." class="instagram"><i class="icon-instagram"></i></a></li>
                     <li><a href="#." class="vimo"><i class="icon-vimeo4"></i></a></li>
                 </ul>
@@ -34,9 +34,10 @@
             </div>
             <div class="col-md-4 col-sm-4 footer_panel bottom25">
                 <h3 class="heading bottom25">Keep in Touch <span class="divider-left"></span></h3>
-                <p class=" address"><i class="icon-map-pin"></i>198 West 21th Street Victoria 8007, Australia</p>
-                <p class=" address"><i class="icon-phone"></i>+92 313 0905455</p>
-                <p class=" address"><i class="icon-mail"></i><a href="mailto:Edua@info.com">test@info.com</a></p>
+                <p class=" address"><i class="fa fa-user"></i>Numan Usama Khan</p>
+                <p class=" address"><i class="icon-phone"></i>0316-4962025</p>
+                <p class=" address"><i class="icon-phone"></i>0313-0905455</p>
+                {{-- <p class=" address"><i class="icon-mail"></i><a href="mailto:Edua@info.com">test@info.com</a></p> --}}
                 <img src="{{ asset('img/footer-map.png') }}" alt="we are here" class="img-responsive">
             </div>
         </div>

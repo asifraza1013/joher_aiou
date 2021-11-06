@@ -31,7 +31,7 @@ class ManageDescriptionsController extends Controller
         if($category == 'tutor_information'){
             $title = 'Tutor Information';
         }
-        $description = Description::where('category', $category)->first();
+        $description = Description::where('category', $category)->get();
         return view('front.pages.admission-detail',  compact([
             'backRpute',
             'backPage',
@@ -67,7 +67,7 @@ class ManageDescriptionsController extends Controller
         if($category == 'thesis_tech_practice_submission'){
             $title = 'Online Thesis & Teaching Practice  Submission';
         }
-        $description = Description::where('category', $category)->first();
+        $description = Description::where('category', $category)->get();
 
         return view('front.pages.admission-detail',  compact([
             'backPage',
@@ -84,7 +84,7 @@ class ManageDescriptionsController extends Controller
     public function compressorTab()
     {
 
-        $description = Description::where('category', 'compressor')->first();
+        $description = Description::where('category', 'compressor')->get();
         return view('front.pages.compressor', compact([
             'description'
         ]));

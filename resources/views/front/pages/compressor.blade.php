@@ -15,14 +15,18 @@
     </div>
 </section>
 <!--Page Header-->
-
 <div class="container bg-light pt-lg-5 pt-2 p-5">
     <div class="card">
         <div class="card-body">
-            @if($description)
-            <h3 class="red">{!! $description->description !!}</h3>
+            @if(count($description))
+            @foreach($description as $descriptions)
+            <p>{!!$descriptions->description!!}</p>
+            @if(!empty($descriptions->link))
+            <a href="{{URL::to('')}}/{{$descriptions->link}}" class="btn btn-primary ">Click For Info </a>
+            @endif
+            @endforeach
             @else
-            <h5 class="red">No Data Found</h5>
+            <h5 class="text center">No Record Found</h5>
             @endif
         </div>
     </div>

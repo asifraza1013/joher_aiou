@@ -159,13 +159,18 @@ Route::get('lesson', 'backend@lesson');
 
 ////////////////////////////////////comment//////////////////////////////////////
 
-Route::post('addcomment', 'backend@addcomment');
+Route::post('addcomment', 'backend@addcomment')->name('add.new.comment');
 Route::get('deletecomment/{id}', 'backend@deletecomment');
 
-Route::post('addreply', 'backend@addreply');
+Route::post('addreply', 'backend@addreply')->name('add.new.reply');
 Route::get('deletereply/{id}', 'backend@deletereply');
 
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/comments', 'front@comments')->name('frontend.comments');
+
+Route::get('admin/comments', 'HomeController@getCommentList')->name('backend.comments');
+Route::get('remove/comments/{id}', 'HomeController@removeComment')->name('backend.comments.remove');

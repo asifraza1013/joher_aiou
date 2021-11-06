@@ -29,14 +29,29 @@ class HomeController extends Controller
     public function index()
     {
         $banner = banner::all();
-     $noti = notification::all();
-     $description = notification::all();
-     $comment = comment::all();
-         $comment= comment::orderBy('id', 'desc')->paginate(20000000);
-          $reply = reply::all();
-           $reply= reply::orderBy('id', 'desc')->paginate(20000000);
+        $noti = notification::all();
+        $description = notification::all();
+        $comments = Comment::with('reply')
+        ->orderBy('id', 'desc')
+        ->get();
+        return view('front.pages.index',compact("banner","noti",'description','comments'));
+    }
 
-
-        return view('front.pages.index',compact("banner","noti",'description','comment','reply'));
+    /**
+     * get comment list
+     */
+    public function getCommentList(Request $request)
+    {
+        $title = 'Commnet List';
+        $comments = Comment::paginate(50);
+        return view('backend.pages.comments', compact([
+            'title',
+            'comments'
+        ]));
+    }
+    public function removeComment($id)
+    {
+        Comment::where('id', $id)->delete();
+        return redirect()->back()->with('success', 'Comment removed successfully');
     }
 }
