@@ -29,8 +29,8 @@ class backend extends Controller
      {
    	return view('backend.pages.dashboard',compact('class'));
    }
-  
-  
+
+
    }
    public function book(){
    	$book = book::all();
@@ -38,7 +38,7 @@ class backend extends Controller
      if(Auth::user()->role == 'admin')
      {
    	return view('backend.pages.book',compact('book','class'));}
-   	
+
    }
    public function assignment(){
       $assignment = assignment::all();
@@ -74,7 +74,7 @@ class backend extends Controller
      {
       return view('backend.pages.banners',compact('banners'));}
    }
-   
+
    public function notification(){
       $notification = notification::all();
        if(Auth::user()->role == 'admin')
@@ -99,26 +99,26 @@ class backend extends Controller
    /////////////////////////////////////////////////////////////////////////
    public function addbook(Request $request){
 
- 
 
-     
+
+
 
           $book = new book();
     $book->wclass=$request->wclass;
     $book->course_id=$request->course_id;
     $book->name=$request->name;
     $book->category=$request->category;
-   
-        
+
+
          $book->save();
 
  $assignment = new assignment();
     $assignment->wclass=$request->wclass;
     $assignment->course_id=$request->course_id;
     $assignment->name=$request->name;
-     
+
          $assignment->save();
-         
+
          $guess = new guess();
     $guess->wclass=$request->wclass;
     $guess->course_id=$request->course_id;
@@ -132,7 +132,7 @@ $guess->save();
 
 
 
-   
+
 public function deletebook($id){
 
 $book = book::find($id);
@@ -186,16 +186,16 @@ return redirect()->back();
 
 
 public function editbook(Request $request){
-  
+
    $id= $request->id;
 
 $book = book::find($id);
 
 if ($request->hasfile('pdffile')) {
  $validatedData =  Validator::make($request->all(),[
-        
+
           'pdffile' =>  'required|mimes:pdf|max:10000',
-                  
+
     ]);
 if ($validatedData->fails()) {
             return redirect()->back()
@@ -204,19 +204,19 @@ if ($validatedData->fails()) {
         }
 
  $file = time().'.'.$request->pdffile->getClientOriginalExtension();
-        $destination="public/file/" ;  
+        $destination="public/file/" ;
          $book->pdffile=$request->pdffile->move($destination, $file);
 
          $book->update();
-         
+
 }
 
 if ($request->hasfile('pdffile1')) {
 
  $validatedData =  Validator::make($request->all(),[
-        
+
           'pdffile1' =>  'required|mimes:pdf|max:10000',
-                  
+
     ]);
 if ($validatedData->fails()) {
             return redirect()->back()
@@ -226,11 +226,11 @@ if ($validatedData->fails()) {
 
 
  $file1 = time().'.'.$request->pdffile1->getClientOriginalExtension();
-        $destination="public/file/" ;  
+        $destination="public/file/" ;
          $book->pdffile1=$request->pdffile1->move($destination, $file1);
 
          $book->update();
-        
+
 }
 
 $book->link1=$request->link1;
@@ -243,23 +243,23 @@ $book->course_id=$request->course_id;
       $book->category=$request->category;
         $book->update();
          return redirect()->back();
-      
+
 }
 
 // update book 1
 
 
  public function updatebook1(Request $request){
-  
+
    $id= $request->id;
 
 $book = book::find($id);
 
 if ($request->hasfile('pdffile')) {
  $validatedData =  Validator::make($request->all(),[
-        
+
           'pdffile' =>  'required|mimes:pdf|max:10000',
-                  
+
     ]);
 if ($validatedData->fails()) {
             return redirect()->back()
@@ -268,12 +268,12 @@ if ($validatedData->fails()) {
         }
 
  $file = time().'.'.$request->pdffile->getClientOriginalExtension();
-        $destination="public/file/" ;  
+        $destination="public/file/" ;
          $book->pdffile=$request->pdffile->move($destination, $file);
 
          $book->update();
          return redirect()->back;
-         
+
 }
 }
 
@@ -282,16 +282,16 @@ if ($validatedData->fails()) {
 
 
  public function updatebook2(Request $request){
-  
+
    $id= $request->id;
 
 $book = book::find($id);
 
 if ($request->hasfile('pdffile')) {
  $validatedData =  Validator::make($request->all(),[
-        
+
           'pdffile' =>  'required|mimes:pdf|max:10000',
-                  
+
     ]);
 if ($validatedData->fails()) {
             return redirect()->back()
@@ -300,12 +300,12 @@ if ($validatedData->fails()) {
         }
 
  $file = time().'.'.$request->pdffile1->getClientOriginalExtension();
-        $destination="public/file/" ;  
+        $destination="public/file/" ;
          $book->pdffile1=$request->pdffile1->move($destination, $file);
 
          $book->update();
          return redirect()->back;
-         
+
 }
 }
 
@@ -314,14 +314,14 @@ if ($validatedData->fails()) {
 
 
 public function editbook1(Request $request){
-  
+
    $id= $request->id;
 
 $book = book::find($id);
 
-    
+
       $file = time().'.'.$request->pdffile->getClientOriginalExtension();
-        $destination="public/file/" ;  
+        $destination="public/file/" ;
          $book->pdffile=$request->pdffile->move($destination, $file);
 
          $book->update();
@@ -334,16 +334,16 @@ $book = book::find($id);
 public function addassignment(Request $request){
 
 
-     
+
 
     $assignment = new assignment();
     $assignment->wclass=$request->wclass;
     $assignment->course_id=$request->course_id;
     $assignment->name=$request->name;
-     
+
          $assignment->save();
          return redirect()->back();
-    
+
    }
 public function deleteassignment($id){
 
@@ -362,9 +362,9 @@ $assignment = assignment::find($id);
 
 if ($request->hasfile('a1')) {
  $validatedData =  Validator::make($request->all(),[
-        
+
           'a1' =>  'required|mimes:pdf|max:10000',
-                  
+
     ]);
 if ($validatedData->fails()) {
             return redirect()->back()
@@ -373,19 +373,19 @@ if ($validatedData->fails()) {
         }
 
  $file = time().'.'.$request->a1->getClientOriginalExtension();
-        $destination="public/file/" ;  
+        $destination="public/file/" ;
          $assignment->a1=$request->a1->move($destination, $file);
 
          $assignment->update();
-         
+
 }
 
 
 if ($request->hasfile('a2')) {
  $validatedData =  Validator::make($request->all(),[
-        
+
           'a2' =>  'required|mimes:pdf|max:10000',
-                  
+
     ]);
 if ($validatedData->fails()) {
             return redirect()->back()
@@ -394,19 +394,19 @@ if ($validatedData->fails()) {
         }
 
  $file = time().'.'.$request->a2->getClientOriginalExtension();
-        $destination="public/file/" ;  
+        $destination="public/file/" ;
          $assignment->a2=$request->a2->move($destination, $file);
 
          $assignment->update();
-         
+
 }
 
 
 if ($request->hasfile('a3')) {
  $validatedData =  Validator::make($request->all(),[
-        
+
           'a3' =>  'required|mimes:pdf|max:10000',
-                  
+
     ]);
 if ($validatedData->fails()) {
             return redirect()->back()
@@ -415,18 +415,18 @@ if ($validatedData->fails()) {
         }
 
  $file = time().'.'.$request->a3->getClientOriginalExtension();
-        $destination="public/file/" ;  
+        $destination="public/file/" ;
          $assignment->a3=$request->a3->move($destination, $file);
 
          $assignment->update();
-         
+
 }
 
 if ($request->hasfile('a4')) {
  $validatedData =  Validator::make($request->all(),[
-        
+
           'a4' =>  'required|mimes:pdf|max:10000',
-                  
+
     ]);
 if ($validatedData->fails()) {
             return redirect()->back()
@@ -435,11 +435,11 @@ if ($validatedData->fails()) {
         }
 
  $file = time().'.'.$request->a4->getClientOriginalExtension();
-        $destination="public/file/" ;  
+        $destination="public/file/" ;
          $assignment->a4=$request->a4->move($destination, $file);
 
          $assignment->update();
-         
+
 }
 
 
@@ -455,8 +455,8 @@ $assignment->link4=$request->link4;
  $assignment->wclass=$request->wclass;
     $assignment->course_id=$request->course_id;
     $assignment->name=$request->name;
-   
-  
+
+
           $assignment->update();
          return redirect()->back();
 }
@@ -553,12 +553,12 @@ public function addthesis(Request $request){
 
 
      $validatedData =  Validator::make($request->all(),[
-        
-          'pdffile' =>  'mimes:pdf|max:10000',
-           
-       
 
-       
+          'pdffile' =>  'mimes:pdf|max:10000',
+
+
+
+
     ]);
 if ($validatedData->fails()) {
             return redirect()->back()
@@ -570,12 +570,12 @@ if ($validatedData->fails()) {
     $thesis->wclass=$request->wclass;
     $thesis->course_id=$request->course_id;
     $thesis->name=$request->name;
-   
-   
- 
+
+
+
          $thesis->save();
          return redirect()->back();
-    
+
    }
 public function deletethesis($id){
 
@@ -591,9 +591,9 @@ public function deletethesisfile($id){
 $thesis->update();
 return redirect()->back();
 
-   
-    
-    
+
+
+
 }
 
 public function deletethesislink($id){
@@ -603,9 +603,9 @@ public function deletethesislink($id){
 $thesis->update();
 return redirect()->back();
 
-   
-    
-    
+
+
+
 }
 
 
@@ -619,9 +619,9 @@ $thesis = theses::find($id);
 
 if ($request->hasfile('pdffile')) {
  $validatedData =  Validator::make($request->all(),[
-        
+
           'pdffile' =>  'required|mimes:pdf|max:10000',
-                  
+
     ]);
 if ($validatedData->fails()) {
             return redirect()->back()
@@ -630,11 +630,11 @@ if ($validatedData->fails()) {
         }
 
  $file = time().'.'.$request->pdffile->getClientOriginalExtension();
-        $destination="public/file/" ;  
+        $destination="public/file/" ;
          $thesis->pdffile=$request->pdffile->move($destination, $file);
 
          $thesis->update();
-         
+
 }
 
 
@@ -645,8 +645,8 @@ $thesis->link1=$request->link1;
  $thesis->wclass=$request->wclass;
     $thesis->course_id=$request->course_id;
     $thesis->name=$request->name;
-   
-  
+
+
           $thesis->update();
          return redirect()->back();
 }
@@ -657,12 +657,12 @@ public function addguess(Request $request){
 
 
      $validatedData =  Validator::make($request->all(),[
-        
-          'pdffile' =>  'mimes:pdf|max:10000',
-           
-       
 
-       
+          'pdffile' =>  'mimes:pdf|max:10000',
+
+
+
+
     ]);
 if ($validatedData->fails()) {
             return redirect()->back()
@@ -674,15 +674,15 @@ if ($validatedData->fails()) {
     $guess->wclass=$request->wclass;
     $guess->course_id=$request->course_id;
     $guess->name=$request->name;
-   
+
     $pdffile = time().'.'.$request->pdffile->getClientOriginalExtension();
-        $destination="public/file/" ;  
+        $destination="public/file/" ;
          $guess->pdffile=$request->pdffile->move($destination, $pdffile);
 
- 
+
          $guess->save();
          return redirect()->back();
-    
+
    }
 public function deleteguess($id){
 
@@ -748,9 +748,9 @@ $guess = guess::find($id);
 
 if ($request->hasfile('pdffile')) {
  $validatedData =  Validator::make($request->all(),[
-        
+
           'pdffile' =>  'required|mimes:pdf,jpeg,png,jpg|max:10000',
-                  
+
     ]);
 if ($validatedData->fails()) {
             return redirect()->back()
@@ -759,20 +759,20 @@ if ($validatedData->fails()) {
         }
 
  $file = time().'.'.$request->pdffile->getClientOriginalExtension();
-        $destination="public/file/" ;  
+        $destination="public/file/" ;
          $guess->pdffile=$request->pdffile->move($destination, $file);
 
          $guess->update();
-         
+
 }
 
 
 
 if ($request->hasfile('pdffile1')) {
  $validatedData =  Validator::make($request->all(),[
-        
+
           'pdffile1' =>  'required|mimes:pdf,jpeg,png,jpg|max:10000',
-                  
+
     ]);
 if ($validatedData->fails()) {
             return redirect()->back()
@@ -781,11 +781,11 @@ if ($validatedData->fails()) {
         }
 
  $file = time().'.'.$request->pdffile1->getClientOriginalExtension();
-        $destination="public/file/" ;  
+        $destination="public/file/" ;
          $guess->pdffile1=$request->pdffile1->move($destination, $file);
 
          $guess->update();
-         
+
 }
 
 
@@ -795,8 +795,8 @@ if ($validatedData->fails()) {
  $guess->wclass=$request->wclass;
     $guess->course_id=$request->course_id;
     $guess->name=$request->name;
-   
-  
+
+
           $guess->update();
          return redirect()->back();
 }
@@ -814,7 +814,7 @@ $link->link1=$request->link1;
 $link->category=$request->category;
 $link->save();
 return redirect()->back();
-         
+
 }
    public function deletelink($id){
 
@@ -840,19 +840,19 @@ return redirect()->back();
 
      $validatedData =  Validator::make($request->all(),[
          'img' => 'dimensions:min_height=400,max_height=650'
-       
+
     ]);
 if ($validatedData->fails()) {
             return redirect()->back()
                         ->withErrors($validatedData)
                         ->withInput();
         }
-          
+
 
              $banner= new banner();
              $banner->title=$request->title;
        $img = time().'.'.$request->img->getClientOriginalExtension();
-        $destination="public/img/" ;  
+        $destination="public/img/" ;
          $banner->img=$request->img->move($destination, $img);
          $banner->save();
          return redirect()->back();
@@ -870,7 +870,7 @@ if ($validatedData->fails()) {
             $banner=  banner::find($id);
             $banner->title=$request->title;
        $img = time().'.'.$request->img->getClientOriginalExtension();
-        $destination="public/img/" ;  
+        $destination="public/img/" ;
          $banner->img=$request->img->move($destination, $img);
          $banner->update();
          return redirect()->back();
@@ -983,7 +983,7 @@ if ($validatedData->fails()) {
 
         }
         public function alladata($id){
-          
+
           $class= addclass::find($id);
           $assignment= assignment::all();
           $comment = comment::all();
@@ -1008,24 +1008,24 @@ if ($validatedData->fails()) {
             public function allgdata($id){
 
           $class= addclass::find($id);
-          $guess= guess::all();
+          $guess= guess::where('wclass', $class->name)->get();
           $comment = comment::all();
          $comment= comment::orderBy('id', 'desc')->paginate(20000000);
           $reply = reply::all();
            $reply= reply::orderBy('id', 'desc')->paginate(20000000);
-            $description = addlink::all();
+            $description = addlink::where('category', 'Table Guess')->get();
 
           return view('front.pages.all-guess',compact('class','guess','comment','reply','description'));
             }
             public function allvdata($id){
 
           $class= addclass::find($id);
-          $book= video::all();
+          $book= video::where('class', $class->name)->get();
           $comment = comment::all();
          $comment= comment::orderBy('id', 'desc')->paginate(20000000);
           $reply = reply::all();
            $reply= reply::orderBy('id', 'desc')->paginate(20000000);
-          $description = addlink::all();
+          $description = addlink::where('category', 'Table Lectures')->get();
           return view('front.pages.all-lectures',compact('class','book','comment','reply','description'));
             }
 
@@ -1040,7 +1040,7 @@ if ($validatedData->fails()) {
                   return redirect()->back();
 
             }
-            
+
             public function deletevideos($id){
 
                $video=  video::find($id);
@@ -1062,7 +1062,7 @@ if ($validatedData->fails()) {
                   return redirect()->back();
 
             }
-            
+
           ////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -1070,26 +1070,26 @@ if ($validatedData->fails()) {
   public function addlesson(Request $request){
 
 
-    
+
 
     $lesson = new lesson();
     $lesson->wclass=$request->wclass;
     $lesson->course_id=$request->course_id;
     $lesson->name=$request->name;
-   
+
     // $file = time().'.'.$request->pdffile->getClientOriginalExtension();
-    //     $destination="public/file/" ;  
+    //     $destination="public/file/" ;
     //      $lesson->pdffile=$request->pdffile->move($destination, $file);
 
-  
 
-        
+
+
          $lesson->save();
          return redirect()->back();
-    
+
    }
-   
-   
+
+
    public function deletelesson1($id){
 
 $lesson = lesson::find($id);
@@ -1107,11 +1107,11 @@ $lesson->update();
 return redirect()->back();
 
 }
-   
-   
-   
-   
-   
+
+
+
+
+
 public function deletelesson($id){
 
 $lesson = lesson::find($id);
@@ -1128,9 +1128,9 @@ $lesson = lesson::find($id);
 
 if ($request->hasfile('pdffile')) {
  $validatedData =  Validator::make($request->all(),[
-        
+
           'pdffile' =>  'required|mimes:pdf|max:10000',
-                  
+
     ]);
 if ($validatedData->fails()) {
             return redirect()->back()
@@ -1139,7 +1139,7 @@ if ($validatedData->fails()) {
         }
 
   $file = time().'.'.$request->pdffile->getClientOriginalExtension();
-        $destination="public/file/" ;  
+        $destination="public/file/" ;
          $lesson->pdffile=$request->pdffile->move($destination, $file);
 }
 
@@ -1151,8 +1151,8 @@ $lesson->link=$request->link;
 $lesson->wclass=$request->wclass;
 $lesson->course_id=$request->course_id;
       $lesson->name=$request->name;
-     
-     
+
+
 
          $lesson->update();
          return redirect()->back();
@@ -1233,7 +1233,7 @@ return redirect()->back();
 
 
 
-  
+
 
 }
 

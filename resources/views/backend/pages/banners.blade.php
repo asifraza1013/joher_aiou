@@ -24,7 +24,7 @@
     <section class="content">
       <div class="row">
         <div class="col-12">
-          
+
 
           <div class="card">
             <div class="card-header">
@@ -37,23 +37,23 @@
                 <tr>
                   <th>Title</th>
                   <th>Image</th>
-                  
+
                   <th>Action</th>
-                  
+
                 </tr>
                 </thead>
                 <tbody>
-              @foreach($banners as $banner) 
-               
+              @foreach($banners as $banner)
+
                 <tr>
                   <td>{{$banner->title}}</td>
                   <td><img src="{{$banner->img}}" style="width: 100px; height: 75px;">
                   </td>
-                 
+
                   <td>
                   <a href="" data-toggle="modal" data-target="#banner{{$banner->id}}" class="btn btn-success">Edit</a>
                 <a href="{{URL::to('')}}/deletebanner/{{$banner->id}}" class="btn btn-danger">Delete</a></td>
-                  
+
                 </tr>
 
 <div class="modal fade" id="banner{{$banner->id}}">
@@ -76,7 +76,7 @@
                                 <input type="text" class="form-control " name="title" value="{{$banner->title}}" required  autofocus>
                             </div>
                 </div>
-                
+
                 <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Image') }}</label>
 
@@ -84,8 +84,8 @@
                                 <input type="file" class="form-control " name="img" value="{{$banner->img}}" required  autofocus>
                             </div>
                 </div>
-               
-                
+
+
                 <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">Submit</label>
 
@@ -97,7 +97,7 @@
             </div>
             <div class="modal-footer justify-content-between">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              
+
             </div>
           </div>
           <!-- /.modal-content -->
@@ -106,17 +106,17 @@
 
 
 
-               
+
                @endforeach
                 </tbody>
                 <tfoot>
                 <tr>
                    <th>Title</th>
                   <th>Image</th>
-                  
+
                   <th>Action</th>
-                  
-                  
+
+
                 </tr>
                 </tfoot>
               </table>

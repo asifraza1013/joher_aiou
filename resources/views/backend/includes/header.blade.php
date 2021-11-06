@@ -10,15 +10,15 @@
 
  <script src="https://cdn.tiny.cloud/1/qaba2wp4lwb52jtoi21cq6gbbow53an9h8mt5cl4h95hr88y/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 
-<link rel="stylesheet" href="{{URL::TO('')}}/public/backassets//dist/css/dropzone.css">
+<link rel="stylesheet" href="{{URL::TO('')}}/backassets//dist/css/dropzone.css">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="{{URL::TO('')}}/public/backassets/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="{{URL::TO('')}}/backassets/plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- DataTables -->
-  <link rel="stylesheet" href="{{URL::TO('')}}/public/backassets/plugins/datatables-bs4/css/dataTables.bootstrap4.css">
+  <link rel="stylesheet" href="{{URL::TO('')}}/backassets/plugins/datatables-bs4/css/dataTables.bootstrap4.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="{{URL::TO('')}}/public/backassets/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="{{URL::TO('')}}/backassets/dist/css/adminlte.min.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
@@ -39,8 +39,8 @@
       </li>
     </ul>
 
-   
-    
+
+
   </nav>
   <!-- /.navbar -->
 
@@ -48,7 +48,7 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="{{URL::TO('')}}/index" class="brand-link">
-      <img src="{{URL::TO('')}}/public/backassets/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+      <img src="{{URL::TO('')}}/backassets/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
       <span class="brand-text font-weight-light">JoherAiou</span>
     </a>
@@ -58,7 +58,7 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="{{URL::TO('')}}/public/backassets/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          <img src="{{URL::TO('')}}/backassets/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
           <a href="{{URL::TO('')}}/dashboard" class="d-block">Admin</a>
@@ -75,12 +75,12 @@
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
-                
+
               </p>
             </a>
-            
+
           </li>
-          
+
           <li class="nav-item">
             <a href="{{URL::TO('')}}/book" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
@@ -172,7 +172,7 @@
               </p>
             </a>
           </li>
-          
+
            <li class="nav-item">
             <a href="{{URL::TO('')}}/notification" class="nav-link">
               <i class="nav-icon fas fa-th"></i>

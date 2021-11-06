@@ -32,7 +32,7 @@ Route::get('thesis', 'front@thesis')->name('thesis');
 Route::get('practice', 'front@practice')->name('practice');
 Route::get('compressor', 'front@compressor')->name('compressor');
 Route::get('videolectures', 'front@videolectures')->name('videolectures');
-Route::get('teaching', 'front@teaching');
+Route::get('teaching', 'front@teaching')->name('teaching');
 Route::get('research', 'front@research');
 Route::get('dashboard', 'backend@dashboard')->name('dashboard');
 Route::get('allassignment', 'backend@assignment');
@@ -95,6 +95,7 @@ Route::get('deletepdflink1/{id}', 'backend@deletepdflink1');
 
 
 Route::get('description', 'backend@description');
+Route::get('user-logout', 'front@userLogout')->name('user.logout');
 Route::post('adddescription', 'backend@adddescription');
 Route::get('deletedescription/{id}', 'backend@deletedescription');
 Route::post('editdescription', 'backend@editdescription');
@@ -102,6 +103,13 @@ Route::post('editdescription', 'backend@editdescription');
 
 
 
+/**
+ * Front page routes (BY asif)
+ */
+Route::get('admission-detail/{category}', 'ManageDescriptionsController@admissionsDescription')->name('front.admission.detail');
+Route::get('lms-portal', 'ManageDescriptionsController@lmsPortalTabs')->name('front.lms.portal.tab');
+Route::get('compressor', 'ManageDescriptionsController@compressorTab')->name('front.compressor.tab');
+Route::get('lms-portal/{category}', 'ManageDescriptionsController@lmsPortalDescription')->name('front.lms.portal');
 
 
 
@@ -129,18 +137,18 @@ Route::post('editclass', 'backend@editclass');
 Route::get('deleteclass/{id}', 'backend@deleteclass');
 
 
-Route::get('alldata/{id}', 'backend@alldata');
-Route::get('alladata/{id}', 'backend@alladata');
+Route::get('alldata/{id}', 'backend@alldata')->name('alldata');
+Route::get('alladata/{id}', 'backend@alladata')->name('alladata');
 Route::get('alltdata/{id}', 'backend@alltdata');
-Route::get('allgdata/{id}', 'backend@allgdata');
-Route::get('allvdata/{id}', 'backend@allvdata');
+Route::get('allgdata/{id}', 'backend@allgdata')->name('allgdata');
+Route::get('allvdata/{id}', 'backend@allvdata')->name('allvdata');
 Route::post('addvlink', 'backend@addvlink');
 Route::get('video_lectures','front@video_lectures');
 Route::get('deletevideos/{id}', 'backend@deletevideos');
 Route::post('editvideos', 'backend@editvideos');
 
 
-Route::get('lessonplan', 'front@lessonplan');
+Route::get('lessonplan', 'front@lessonplan')->name('lessonplan');
 
 Route::post('addlesson', 'backend@addlesson');
 Route::get('deletelesson1/{id}', 'backend@deletelesson1');

@@ -33,7 +33,7 @@
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
-        
+
         <div class="row">
           <div class="col-lg-3 col-6">
             <!-- small box -->
@@ -97,12 +97,12 @@
           </div>
           <!-- ./col -->
         </div>
-        
+
 
         <div class="row">
-          
-         
-          
+
+
+
           <div class="col-lg-3 col-6">
             <!-- small box -->
             <div class="small-box bg-danger">
@@ -216,7 +216,7 @@
           </div>
 
         </div>
-        
+
 
 
          <div class="modal fade" id="books">
@@ -231,7 +231,7 @@
             <div class="modal-body">
               <form action="{{URL::TO('')}}/addbook" method="POST" enctype="multipart/form-data">
                  @csrf
-                 
+
                 <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Class Name') }}</label>
 
@@ -242,7 +242,7 @@
                                   @endforeach
                                 </select>
                             </div>
-                </div>                
+                </div>
                 <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Course Id') }}</label>
 
@@ -250,7 +250,7 @@
                                 <input type="text" class="form-control " name="course_id" value="" required  autofocus>
                             </div>
                 </div>
-                
+
                 <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Course Name') }}</label>
 
@@ -267,7 +267,7 @@
                                 </select>
                             </div>
                 </div>
-               
+
                 <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">Submit</label>
 
@@ -279,7 +279,7 @@
             </div>
             <div class="modal-footer justify-content-between">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              
+
             </div>
           </div>
           <!-- /.modal-content -->
@@ -308,7 +308,7 @@
                                   @endforeach
                                 </select>
                             </div>
-                </div>  
+                </div>
                 <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Course Id') }}</label>
 
@@ -316,7 +316,7 @@
                                 <input type="text" class="form-control " name="course_id" value="" required  autofocus>
                             </div>
                 </div>
-                
+
                 <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Course Name') }}</label>
 
@@ -324,7 +324,7 @@
                                 <input type="text" class="form-control " name="name" value="" required  autofocus>
                             </div>
                 </div>
-               
+
                <!--  <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Assignment1') }}</label>
 
@@ -388,7 +388,7 @@
 
 
 
-              
+
              <form action="{{URL::TO('')}}/addthesis" method="POST" enctype="multipart/form-data"  id="my-awesome-dropzone">
                  @csrf
                   <div class="form-group row">
@@ -401,7 +401,7 @@
                                   @endforeach
                                 </select>
                             </div>
-                </div>  
+                </div>
                 <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Course Id') }}</label>
 
@@ -409,7 +409,7 @@
                                 <input type="text" class="form-control " name="course_id" value="" required  autofocus>
                             </div>
                 </div>
-                
+
                 <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Course Name') }}</label>
 
@@ -417,7 +417,7 @@
                                 <input type="text" class="form-control " name="name" value="" required  autofocus>
                             </div>
                 </div>
-               
+
                 <!--<div class="form-group row">-->
                 <!--            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Pdf') }}</label>-->
 
@@ -468,7 +468,7 @@
                                   @endforeach
                                 </select>
                             </div>
-                </div>  
+                </div>
                 <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Course Id') }}</label>
 
@@ -476,7 +476,7 @@
                                 <input type="text" class="form-control " name="course_id" value="" required  autofocus>
                             </div>
                 </div>
-                
+
                 <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Course Name') }}</label>
 
@@ -529,7 +529,7 @@
                                 <textarea type="text" class="form-control " name="description" value="" required  autofocus> </textarea>
                             </div>
                 </div>
-                
+
                 <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Link') }}</label>
 
@@ -555,7 +555,7 @@
                                   <option>Online</option>
                                   <option>Video</option>
                                   <option>Compressor</option>
-                                  
+
                                    <option>Table Assignment</option>
                                    <option>Table Book</option>
                                     <option>Table Guess</option>
@@ -565,7 +565,7 @@
                                 </select>
                             </div>
                 </div>
-               
+
                 <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">Submit</label>
 
@@ -603,7 +603,7 @@
                                 <input type="text" class="form-control " name="title" value="" required  autofocus>
                             </div>
                 </div>
-                
+
                 <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Image') }}</label>
 
@@ -611,8 +611,8 @@
                                 <input type="file" class="form-control " name="img" value="" required  autofocus>
                             </div>
                 </div>
-                
-               
+
+
                 <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">Submit</label>
 
@@ -651,7 +651,7 @@
                                 <textarea type="text" class="form-control " name="noti" value="" required  autofocus> </textarea>
                             </div>
                 </div>
-                
+
                 <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Notification Title') }}</label>
 
@@ -659,7 +659,7 @@
                                 <input type="text" class="form-control " name="name" value="" required  autofocus>
                             </div>
                 </div>
-                
+
                 <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('More Detail Link') }}</label>
 
@@ -667,8 +667,8 @@
                                 <input type="text" class="form-control " name="date" value="" required  autofocus>
                             </div>
                 </div>
-                
-               
+
+
                 <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">Submit</label>
 
@@ -706,7 +706,7 @@
                                 <input type="text" class="form-control " name="course_id" value="" required  autofocus>
                             </div>
                 </div>
-                
+
                 <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
@@ -770,8 +770,8 @@
                                 <input type="text" class="form-control " name="name" value="" required  autofocus>
                             </div>
                 </div>
-                
-                
+
+
                 <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">Submit</label>
 
@@ -815,30 +815,23 @@
                                 <textarea type="text" class="form-control " name="description" value="" required  autofocus> </textarea>
                             </div>
                 </div>
-                
+
 
                  <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Category') }}</label>
 
                             <div class="col-md-6">
                                 <select type="text" class="form-control " name="category" value="" required  autofocus>
-                                  <option>Books</option>
-                                  <option>Assignments</option>
-                                  <option>Result</option>
-                                  <option>Application</option>
-                                  <option>Admission</option>
-                                  <option>Thesis</option>
-                                  <option>Teaching Practice</option>
-                                   <option>Research Project</option>
-                                  <option>Video</option>
-                                  <option>Guess Papers</option>
-                                  <option>Lesson</option>
-                                 
-                                      
+                                    <option value="" disabled selected>-- select --</option>
+                                    @foreach (config('constants.categorires') as $key=>$item)
+                                    <option value="{{ $key }}">{{ $item }}</option>
+                                  @endforeach
+
+
                                 </select>
                             </div>
                 </div>
-                
+
                 <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">Submit</label>
 
@@ -872,7 +865,7 @@
             <div class="modal-body">
               <form action="{{URL::TO('')}}/addlesson" method="POST" enctype="multipart/form-data">
                  @csrf
-                 
+
                 <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Class Name') }}</label>
 
@@ -883,7 +876,7 @@
                                   @endforeach
                                 </select>
                             </div>
-                </div>                
+                </div>
                 <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Course Id') }}</label>
 
@@ -891,7 +884,7 @@
                                 <input type="text" class="form-control " name="course_id" value="" required  autofocus>
                             </div>
                 </div>
-                
+
                 <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Course Name') }}</label>
 
@@ -899,7 +892,7 @@
                                 <input type="text" class="form-control " name="name" value="" required  autofocus>
                             </div>
                 </div>
-               
+
                 <!--<div class="form-group row">-->
                 <!--            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Lesson Plan') }}</label>-->
 
@@ -907,7 +900,7 @@
                 <!--                <input type="file" class="form-control " name="pdffile" value="" required  autofocus>-->
                 <!--            </div>-->
                 <!--</div>-->
-                
+
                 <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">Submit</label>
 
@@ -919,7 +912,7 @@
             </div>
             <div class="modal-footer justify-content-between">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              
+
             </div>
           </div>
           <!-- /.modal-content -->

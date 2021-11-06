@@ -24,7 +24,7 @@
     <section class="content">
       <div class="row">
         <div class="col-12">
-          
+
 
           <div class="card">
             <div class="card-header">
@@ -36,25 +36,25 @@
                 <thead>
                 <tr>
                   <th>Description</th>
-                  
+
                   <th>Category</th>
                   <th>Action</th>
-                  
+
                 </tr>
                 </thead>
                 <tbody>
-              @foreach($description as $descriptions) 
-               
+              @foreach($description as $descriptions)
+
                 <tr>
                   <td>{!!$descriptions->description!!}</td>
-                  
+
                   </td>
                   <td>{{$descriptions->category}}
                   </td>
                   <td>
                   <a href="" data-toggle="modal" data-target="#descriptions{{$descriptions->id}}" class="btn btn-success">Edit</a>
                 <a href="{{URL::to('')}}/deletedescription/{{$descriptions->id}}" class="btn btn-danger">Delete</a></td>
-                  
+
                 </tr>
 
 <div class="modal fade" id="descriptions{{$descriptions->id}}">
@@ -77,26 +77,21 @@
                                 <textarea type="text" class="form-control " name="description" value="" required  autofocus>{{$descriptions->description}} </textarea>
                             </div>
                 </div>
-                
-                
+
+
                 <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Category') }}</label>
 
                             <div class="col-md-6">
                                 <select type="text" class="form-control " name="category" value="" required  autofocus>
                                   <option>{{$descriptions->category}}</option>
-                                  <option>Books</option>
-                                  <option>Assignments</option>
-                                  <option>Result</option>
-                                  <option>Application</option>
-                                  <option>Admission</option>
-                                  <option>Thesis</option>
-                                  <option>Video</option>
-                                  <option>Guess Papers</option>
+                                  @foreach (config('constants.categorires') as $key=>$item)
+                                    <option value="{{ $key }}">{{ $item }}</option>
+                                  @endforeach
                                 </select>
                             </div>
                 </div>
-                
+
                 <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">Submit</label>
 
@@ -108,7 +103,7 @@
             </div>
             <div class="modal-footer justify-content-between">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              
+
             </div>
           </div>
           <!-- /.modal-content -->
@@ -117,7 +112,7 @@
 
 
 
-               
+
                @endforeach
                 </tbody>
                 <tfoot>
@@ -126,7 +121,7 @@
                   <th>Link</th>
                   <th>Category</th>
                   <th>Action</th>
-                  
+
                 </tr>
                 </tfoot>
               </table>
@@ -143,3 +138,5 @@
   </div>
   <!-- /.content-wrapper -->
  @stop
+
+

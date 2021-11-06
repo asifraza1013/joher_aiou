@@ -30,46 +30,46 @@
 
 
 <!-- jQuery -->
-<script src="{{URL::TO('')}}/public/backassets/plugins/jquery/jquery.min.js"></script>
+<script src="{{URL::TO('')}}/backassets/plugins/jquery/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
-<script src="{{URL::TO('')}}/public/backassets/plugins/jquery-ui/jquery-ui.min.js"></script>
+<script src="{{URL::TO('')}}/backassets/plugins/jquery-ui/jquery-ui.min.js"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 <script>
   $.widget.bridge('uibutton', $.ui.button)
 </script>
 <!-- Bootstrap 4 -->
-<script src="{{URL::TO('')}}/public/backassets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="{{URL::TO('')}}/backassets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- ChartJS -->
-<script src="{{URL::TO('')}}/public/backassets/plugins/chart.js/Chart.min.js"></script>
+<script src="{{URL::TO('')}}/backassets/plugins/chart.js/Chart.min.js"></script>
 <!-- Sparkline -->
-<script src="{{URL::TO('')}}/public/backassets/plugins/sparklines/sparkline.js"></script>
+<script src="{{URL::TO('')}}/backassets/plugins/sparklines/sparkline.js"></script>
 <!-- JQVMap -->
-<script src="{{URL::TO('')}}/public/backassets/plugins/jqvmap/jquery.vmap.min.js"></script>
-<script src="{{URL::TO('')}}/public/backassets/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<script src="{{URL::TO('')}}/backassets/plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="{{URL::TO('')}}/backassets/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
 <!-- jQuery Knob Chart -->
-<script src="{{URL::TO('')}}/public/backassets/plugins/jquery-knob/jquery.knob.min.js"></script>
+<script src="{{URL::TO('')}}/backassets/plugins/jquery-knob/jquery.knob.min.js"></script>
 <!-- daterangepicker -->
-<script src="{{URL::TO('')}}/public/backassets/plugins/moment/moment.min.js"></script>
-<script src="{{URL::TO('')}}/public/backassets/plugins/daterangepicker/daterangepicker.js"></script>
+<script src="{{URL::TO('')}}/backassets/plugins/moment/moment.min.js"></script>
+<script src="{{URL::TO('')}}/backassets/plugins/daterangepicker/daterangepicker.js"></script>
 <!-- Tempusdominus Bootstrap 4 -->
-<script src="{{URL::TO('')}}/public/backassets/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<script src="{{URL::TO('')}}/backassets/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
 <!-- Summernote -->
-<script src="{{URL::TO('')}}/public/backassets/plugins/summernote/summernote-bs4.min.js"></script>
+<script src="{{URL::TO('')}}/backassets/plugins/summernote/summernote-bs4.min.js"></script>
 <!-- overlayScrollbars -->
-<script src="{{URL::TO('')}}/public/backassets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<script src="{{URL::TO('')}}/backassets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <!-- AdminLTE App -->
-<script src="{{URL::TO('')}}/public/backassets/dist/js/adminlte.js"></script>
+<script src="{{URL::TO('')}}/backassets/dist/js/adminlte.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="{{URL::TO('')}}/public/backassets/dist/js/pages/dashboard.js"></script>
+<script src="{{URL::TO('')}}/backassets/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="{{URL::TO('')}}/public/backassets/dist/js/demo.js"></script>
+<script src="{{URL::TO('')}}/backassets/dist/js/demo.js"></script>
 <!-- DataTables -->
-<script src="{{URL::TO('')}}/public/backassets/plugins/datatables/jquery.dataTables.js"></script>
-<script src="{{URL::TO('')}}/public/backassets/plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
+<script src="{{URL::TO('')}}/backassets/plugins/datatables/jquery.dataTables.js"></script>
+<script src="{{URL::TO('')}}/backassets/plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
 <!-- AdminLTE App -->
-<script src="{{URL::TO('')}}/public/backassets/dist/js/adminlte.min.js"></script>
+<script src="{{URL::TO('')}}/backassets/dist/js/adminlte.min.js"></script>
 
-<script src="{{URL::TO('')}}/public/backassets/dist/js/dropzone.js"></script>
+<script src="{{URL::TO('')}}/backassets/dist/js/dropzone.js"></script>
 
 <script>
   $(function () {

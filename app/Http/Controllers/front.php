@@ -16,6 +16,7 @@ use App\Comment;
 use App\Reply;
 use App\Theses;
 use Artisan;
+use Illuminate\Support\Facades\Auth;
 
 class front extends Controller
 {
@@ -35,48 +36,46 @@ public function index(){
      $noti = notification::all();
      $description = description::all();
       $comment = comment::all();
-         $comment= comment::orderBy('id', 'desc')->paginate(20000000);
+         $comment= comment::orderBy('id', 'desc')->get();
           $reply = reply::all();
-           $reply= reply::orderBy('id', 'desc')->paginate(20000000);
+           $reply= reply::orderBy('id', 'desc')->get();
 
-         
+
         return view('front.pages.index',compact("banner","noti","description",'comment','reply'));
     }
 
 public function about(){
 
-        
+
 $comment = comment::all();
-         $comment= comment::orderBy('id', 'desc')->paginate(20000000);
+         $comment= comment::orderBy('id', 'desc')->get();
           $reply = reply::all();
-           $reply= reply::orderBy('id', 'desc')->paginate(20000000);
+           $reply= reply::orderBy('id', 'desc')->get();
 
 return view('front.pages.about',compact('comment','reply'));
 }
     public function admission(){
         $link= addlink::all();
         $comment = comment::all();
-         $comment= comment::orderBy('id', 'desc')->paginate(20000000);
+         $comment= comment::orderBy('id', 'desc')->get();
           $reply = reply::all();
-           $reply= reply::orderBy('id', 'desc')->paginate(20000000);
+           $reply= reply::orderBy('id', 'desc')->get();
 
 
     	return view('front.pages.admission',compact("link","comment",'reply'));
     }
 
     public function books(){
-
 $class= addclass::all();
 $comment = comment::all();
-         $comment= comment::orderBy('id', 'desc')->paginate(20000000);
+         $comment= comment::orderBy('id', 'desc')->get();
           $reply = reply::all();
-           $reply= reply::orderBy('id', 'desc')->paginate(20000000);
-
+           $reply= reply::orderBy('id', 'desc')->get();
     	return view('front.pages.books',compact("class","comment",'reply'));
     }
 
     public function applicationform (){
-$link= addlink::all();
+$link= addlink::where('category', 'Application')->get();
 $comment = comment::all();
          $comment= comment::orderBy('id', 'desc')->paginate(20000000);
           $reply = reply::all();
@@ -104,7 +103,7 @@ $comment = comment::all();
         return view('front.pages.guesspaper',compact("class","comment",'reply'));
     }
     public function results(){
- $link= addlink::all();
+ $link= addlink::where('category', 'Result')->get();
  $comment = comment::all();
          $comment= comment::orderBy('id', 'desc')->paginate(20000000);
           $reply = reply::all();
@@ -118,25 +117,25 @@ $comment = comment::all();
          $comment= comment::orderBy('id', 'desc')->paginate(20000000);
           $reply = reply::all();
            $reply= reply::orderBy('id', 'desc')->paginate(20000000);
-  $description = addlink::all();
+        $description = addlink::where('category', 'Table Thesis')->get();
         return view('front.pages.thesis',compact("thesis","comment",'reply','description'));
     }
      public function teaching(){
-        $thesis= theses::all();
+        $thesis= theses::where('course_id', '8607')->get();
         $comment = comment::all();
          $comment= comment::orderBy('id', 'desc')->paginate(20000000);
           $reply = reply::all();
            $reply= reply::orderBy('id', 'desc')->paginate(20000000);
-  $description = addlink::all();
+            $description = addlink::where('category', 'Teaching Practice')->get();
         return view('front.pages.teaching',compact("thesis","comment",'reply','description'));
     }
      public function research(){
-        $thesis= theses::all();
+        $thesis= theses::where('course_id', '8613')->get();
         $comment = comment::all();
          $comment= comment::orderBy('id', 'desc')->paginate(20000000);
           $reply = reply::all();
            $reply= reply::orderBy('id', 'desc')->paginate(20000000);
-  $description = addlink::all();
+        $description = addlink::where('category', 'Research Project')->get();
         return view('front.pages.research',compact("thesis","comment",'reply','description'));
     }
      public function practice(){
@@ -146,7 +145,7 @@ $comment = comment::all();
            $reply= reply::orderBy('id', 'desc')->paginate(20000000);
         return view('front.pages.practice',compact("comment",'reply'));
     }
-    
+
     public function videolectures(){
          $class= addclass::all();
          $comment = comment::all();
@@ -186,5 +185,14 @@ $comment = comment::all();
 
         return view('front.pages.compressor',compact('link',"comment",'reply'));
     }
-   
+
+    /**
+     * Logout user by get route
+     */
+    public function userLogout()
+    {
+        Auth::logout();
+        return redirect(route('index'));
+    }
+
 }
