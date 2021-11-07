@@ -29,7 +29,7 @@
 </section>
 
 <section id="about " class="icon_wrap">
-<div class="bg-light p-5">
+<div class="bg-light p-5 d-lg-block d-none">
     <div class="container text-center">
         <h1 class="bolder">What We Offer</h1>
     </div>
@@ -42,75 +42,75 @@
         <div class="row">
             <div class="icon_wrap padding-bottom-half clearfix">
                 <a href="{{ route('admission') }}">
-                    <div class="col-sm-3 col-xs-6 icon_box text-center heading_space wow fadeInUp" data-wow-delay="300ms">
+                    <div class="col-sm-4 col-xs-4 icon_box text-center heading_space wow fadeInUp" data-wow-delay="500ms">
                         <i class="icon-home"></i>
                         <h4 class="text-capitalize bottom20 margin10">Admissions</h4>
                     </div>
                 </a>
                 <a href="{{ route('front.lms.portal.tab') }}">
-                <div class="col-sm-3 icon_box text-center heading_space wow fadeInUp" data-wow-delay="400ms">
+                    <div class="col-sm-4 col-xs-4 icon_box text-center heading_space wow fadeInUp" data-wow-delay="500ms">
                     <i class="icon-camera"></i>
                     <h4 class="text-capitalize bottom20 margin10">Aaghi LMS Portal</h4>
                 </div>
                 </a>
                 <a href="{{ route('books') }}">
-                <div class="col-sm-3 col-xs-6 icon_box text-center heading_space wow fadeInUp" data-wow-delay="400ms">
+                    <div class="col-sm-4 col-xs-4 icon_box text-center heading_space wow fadeInUp" data-wow-delay="500ms">
                     <i class="icon-books"></i>
                     <h4 class="text-capitalize bottom20 margin10">Books & Key Books</h4>
                 </div>
                 </a>
                 <a href="{{ route('assignment') }}">
-                <div class="col-sm-3 icon_box text-center heading_space wow fadeInUp" data-wow-delay="500ms">
+                    <div class="col-sm-4 col-xs-4 icon_box text-center heading_space wow fadeInUp" data-wow-delay="500ms">
                     <i class="icon-book"></i>
                     <h4 class="text-capitalize bottom20 margin10">Solved Assignments</h4>
                     {{-- <p class="no_bottom">Free Download all programs Spring 2021 Solve Assignment in PDF.</p> --}}
                 </div>
                 </a>
                 <a href="{{ route('guesspaper') }}">
-                <div class="col-sm-3 col-xs-6 icon_box text-center heading_space wow fadeInUp" data-wow-delay="600ms">
+                    <div class="col-sm-4 col-xs-4 icon_box text-center heading_space wow fadeInUp" data-wow-delay="500ms">
                     <i class="icon-globe"></i>
                     <h4 class="text-capitalize bottom20 margin10">Past Papers</h4>
                     {{-- <p class="no_bottom">Free Download Solved Semester Terminal Exam (STE) Autumn 2020.</p> --}}
                 </div>
                 </a>
                 <a href="{{ route('videolectures') }}">
-                <div class="col-sm-3 icon_box text-center heading_space wow fadeInUp" data-wow-delay="400ms">
+                    <div class="col-sm-4 col-xs-4 icon_box text-center heading_space wow fadeInUp" data-wow-delay="500ms">
                     <i class="icon-video"></i>
                     <h4 class="text-capitalize bottom20 margin10">Video Lectures</h4>
                 </div>
                 </a>
                 <a href="{{ route('results') }}">
-                <div class="col-sm-3 col-xs-6 icon_box text-center heading_space wow fadeInUp" data-wow-delay="500ms">
+                    <div class="col-sm-4 col-xs-4 icon_box text-center heading_space wow fadeInUp" data-wow-delay="500ms">
                     <i class="icon-list"></i>
                     <h4 class="text-capitalize bottom20 margin10">Examination & Results</h4>
                 </div>
                 </a>
                 <a href="{{ route('applicationform') }}">
-                <div class="col-sm-3 icon_box text-center heading_space wow fadeInUp" data-wow-delay="500ms">
+                    <div class="col-sm-4 col-xs-4 icon_box text-center heading_space wow fadeInUp" data-wow-delay="500ms">
                     <i class="icon-layers"></i>
                     <h4 class="text-capitalize bottom20 margin10">Application Form</h4>
                 </div>
                 </a>
                 <a href="{{ route('practice') }}">
-                <div class="col-sm-3 icon_box text-center heading_space wow fadeInUp" data-wow-delay="500ms">
+                    <div class="col-sm-4 col-xs-4 icon_box text-center heading_space wow fadeInUp" data-wow-delay="500ms">
                     <i class="icon-user"></i>
                     <h4 class="text-capitalize bottom20 margin10">Solve Thesis And Teaching Practic</h4>
                 </div>
                 </a>
                 <a href="{{ route('front.compressor.tab') }}">
-                <div class="col-sm-3 col-xs-6 icon_box text-center heading_space wow fadeInUp" data-wow-delay="500ms">
+                    <div class="col-sm-4 col-xs-4 icon_box text-center heading_space wow fadeInUp" data-wow-delay="500ms">
                     <i class="icon-laptop"></i>
                     <h4 class="text-capitalize bottom20 margin10">Compressor</h4>
                 </div>
                 </a>
                 <a href="{{ route('front.lms.portal.tab') }}">
-                <div class="col-sm-3 col-xs-6 icon_box text-center heading_space wow fadeInUp" data-wow-delay="500ms">
+                    <div class="col-sm-4 col-xs-4 icon_box text-center heading_space wow fadeInUp" data-wow-delay="500ms">
                     <i class="icon-browser"></i>
                     <h4 class="text-capitalize bottom20 margin10">Articles</h4>
                 </div>
                 </a>
                 <a href="{{ route('lessonplan') }}">
-                <div class="col-sm-3 col-xs-6 icon_box text-center heading_space wow fadeInUp" data-wow-delay="500ms">
+                <div class="col-sm-4 col-xs-4 icon_box text-center heading_space wow fadeInUp" data-wow-delay="500ms">
                     <i class="icon-browser"></i>
                     <h4 class="text-capitalize bottom20 margin10">Lesson Plan</h4>
                 </div>
