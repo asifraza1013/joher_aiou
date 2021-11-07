@@ -33,6 +33,7 @@
 @endif
 
 <div class="container pt-lg-5 pt-2">
+   <div class="card shadow">
     <table class="table" id="book-table">
         <thead class="thead-dark" style="background: black; color: white">
             <tr>
@@ -42,6 +43,7 @@
             </tr>
         </thead>
         <tbody>
+            @if(count($book))
             @foreach($book as $books)
             <tr>
                 <td>{{$books->course_id}}</td>
@@ -49,7 +51,13 @@
                 <td><a href="{{$books->link}}" class="btn btn-primary">Click For Video</a></td>
             </tr>
             @endforeach
+            @else
+            <tr class="text-center">
+                <td colspan="3">No Record Found!</td>
+            </tr>
+            @endif
         </tbody>
     </table>
+   </div>
 </div>
 @endsection

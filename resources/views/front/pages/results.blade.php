@@ -19,7 +19,16 @@
 <div class="container bg-light pt-lg-5 pt-2 p-5">
     <div class="card">
         <div class="card-body">
-            <h3 class="red">InshaAllah Coming Soon</h3>
+            @if(count($link))
+            @foreach($link as $descriptions)
+            <p>{!!$descriptions->description!!}</p>
+            @if(!empty($descriptions->link))
+            <a href="{{URL::to('')}}/{{$descriptions->link}}" class="btn btn-primary ">Click For Info </a>
+            @endif
+            @endforeach
+            @else
+            <h5 class="red text-center">No Data Found</h5>
+            @endif
         </div>
     </div>
 </div>

@@ -183,6 +183,16 @@
             </a>
           </li>
 
+           <li class="nav-item">
+            <a href="{{ route('backend.comments') }}" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Comments
+                <span class="right badge badge-danger">All</span>
+              </p>
+            </a>
+          </li>
+
 
         </ul>
       </nav>

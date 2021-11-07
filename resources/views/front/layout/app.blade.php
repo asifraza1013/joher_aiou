@@ -4,6 +4,8 @@
 @include('front.inc.head')
 
 <body>
+<a href="{{ route('about') }}" class="contactIcon"><i class="fa fa-location-arrow"></i></a>
+<a href="{{ route('frontend.comments') }}" class="commentIcon"><i class="fa fa-comments"></i></a>
 <a href="#" class="scrollToTop"><i class="fa fa-angle-up"></i></a>
 <!--Loader-->
 <div class="loader">

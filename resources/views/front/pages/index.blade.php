@@ -35,6 +35,7 @@
     </div>
 </div>
 </section>
+@include('msg.flash_messages')
 <!--ABout US-->
 <section id="about" class="padding">
     <div class="container">
@@ -90,7 +91,7 @@
                     <h4 class="text-capitalize bottom20 margin10">Application Form</h4>
                 </div>
                 </a>
-                <a href="{{ route('teaching') }}">
+                <a href="{{ route('practice') }}">
                 <div class="col-sm-3 icon_box text-center heading_space wow fadeInUp" data-wow-delay="500ms">
                     <i class="icon-user"></i>
                     <h4 class="text-capitalize bottom20 margin10">Solve Thesis And Teaching Practic</h4>
@@ -101,15 +102,25 @@
                     <i class="icon-laptop"></i>
                     <h4 class="text-capitalize bottom20 margin10">Compressor</h4>
                 </div>
+                </a>
                 <a href="{{ route('front.lms.portal.tab') }}">
                 <div class="col-sm-3 col-xs-6 icon_box text-center heading_space wow fadeInUp" data-wow-delay="500ms">
                     <i class="icon-browser"></i>
                     <h4 class="text-capitalize bottom20 margin10">Articles</h4>
                 </div>
+                </a>
+                <a href="{{ route('lessonplan') }}">
+                <div class="col-sm-3 col-xs-6 icon_box text-center heading_space wow fadeInUp" data-wow-delay="500ms">
+                    <i class="icon-browser"></i>
+                    <h4 class="text-capitalize bottom20 margin10">Lesson Plan</h4>
+                </div>
+                </a>
             </div>
         </div>
+
+    <!-- comment section -->
+    @include('layouts.comments')
     </div>
 </section>
 <!--ABout US-->
-
 @endsection

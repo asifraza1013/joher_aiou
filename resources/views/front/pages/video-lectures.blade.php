@@ -19,7 +19,7 @@
 <!-- Courses -->
 <section id="course_all" class="padding-bottom">
     <div class="container">
-        <div class="row">
+        {{-- <div class="row">
             @foreach($class as $classes)
             @if (!is_null($classes) && $classes->name)
             <div class="col-sm-6 col-lg-3">
@@ -33,6 +33,36 @@
             </div>
             @endif
             @endforeach
+        </div> --}}
+        <div class="card shadow  mt-3 mt-lg-5">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Lecture Name</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if($class)
+                    @foreach ($class as $key=>$item)
+                    @if (!is_null($item) && $item->name)
+                    <tr>
+                        <th scope="row">{{ $key + 1 }}</th>
+                        <td>{{ $item->name }}</td>
+                        <td>
+                            <a class="btn_common yellow border_radius" href="{{ route('allvdata', $item->id) }}">Click To View</a>
+                        </td>
+                    </tr>
+                    @endif
+                    @endforeach
+                    @else
+                    <tr class="text-center">
+                        <td colspan="2">No Record Found.</td>
+                    </tr>
+                    @endif
+                </tbody>
+            </table>
         </div>
     </div>
 </section>

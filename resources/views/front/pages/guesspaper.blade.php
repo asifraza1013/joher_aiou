@@ -19,20 +19,36 @@
 <!-- Courses -->
 <section id="course_all" class="padding-bottom">
     <div class="container">
-        <div class="row">
-            @foreach($class as $classes)
-            @if (!is_null($classes) && $classes->name)
-            <div class="col-sm-6 col-lg-3">
-                <div class="course margin_top wow fadeIn" data-wow-delay="400ms">
-                    <div class="image bottom25">
-                        <img src="{{ asset('img/past.png') }}" alt="Course" class="border_radius" style="width: 200px; height: 150px;">
-                    </div>
-                    <h4 class="bottom10"><a href="{{ route('allgdata', $classes->id) }}">Download {{ $classes->name }}</a></h4>
-                    <a class="btn_common yellow border_radius" href="{{ route('allgdata', $classes->id) }}">Click To Get Guess Papers</a>
-                </div>
+            <div class="card shadow  mt-3 mt-lg-5">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Book Name</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if($class)
+                        @foreach ($class as $key=>$item)
+                        @if (!is_null($item) && $item->name)
+                        <tr>
+                            <th scope="row">{{ $key + 1 }}</th>
+                            <td>{{ $item->name }}</td>
+                            <td>
+                                <a class="btn_common yellow border_radius" href="{{ route('allgdata', $item->id) }}">Click To Get Guess Papers</a>
+                            </td>
+                        </tr>
+                        @endif
+                        @endforeach
+                        @else
+                        <tr class="text-center">
+                            <td colspan="2">No Record Found.</td>
+                        </tr>
+                        @endif
+                    </tbody>
+                </table>
             </div>
-            @endif
-            @endforeach
         </div>
     </div>
 </section>

@@ -909,15 +909,45 @@ ul.comment li a > i{
   display:none;
   background:#ffb600;
 }
-.scrollToTop:hover{
+.commentIcon{
+  width:32px;
+  height:32px;
+  border-radius:4px;
+  text-align:center;
+  font-weight: bold;
+  line-height:26px;
+  font-size:25px;
+  position:fixed;
+  z-index:1000;
+  bottom:60px;
+  right:40px;
+  display:block;
+  background:#ffb600;
+}
+.contactIcon{
+  width:32px;
+  height:32px;
+  border-radius:4px;
+  text-align:center;
+  font-weight: bold;
+  line-height:26px;
+  font-size:25px;
+  position:fixed;
+  z-index:1000;
+  bottom:103px;
+  right:40px;
+  display:block;
+  background:#ffb600;
+}
+.scrollToTop:hover, .commentIcon:hover, .contactIcon:hover{
 	background:#4587d9;
 }
-.scrollToTop, .scrollToTop:hover, .scrollToTop:focus{
+.scrollToTop, .scrollToTop:hover, .scrollToTop:focus, .commentIcon, .commentIcon:hover, .commentIcon:focus, .contactIcon, .contactIcon:hover, .contactIcon:focus{
 	color: #fff;
 }
 
 
-.scrollToTop, a, .btn_common:after,
+.scrollToTop, .commentIcon, .contactIcon, a, .btn_common:after,
 .search_btn > span, .icon_box,
 .owl-theme .owl-controls .owl-buttons div,
 .tparrows, #director_slider .post, .teacher .post,

@@ -8,7 +8,7 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
- <script src="https://cdn.tiny.cloud/1/qaba2wp4lwb52jtoi21cq6gbbow53an9h8mt5cl4h95hr88y/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+ {{-- <script src="https://cdn.tiny.cloud/1/qaba2wp4lwb52jtoi21cq6gbbow53an9h8mt5cl4h95hr88y/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script> --}}
 
 
 <link rel="stylesheet" href="{{URL::TO('')}}/backassets//dist/css/dropzone.css">
@@ -211,6 +211,16 @@
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Notifications
+                <span class="right badge badge-danger">All</span>
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="{{ route('backend.comments') }}" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Comments
                 <span class="right badge badge-danger">All</span>
               </p>
             </a>

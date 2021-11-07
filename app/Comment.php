@@ -19,5 +19,8 @@ class Comment extends Authenticatable
  	'uname', 'comment',
     ];
 
-     
+    public function reply()
+    {
+        return $this->hasMany('App\Reply', 'cmntid', 'id');
+    }
 }

@@ -33,6 +33,7 @@
 @endif
 
 <div class="container pt-lg-5 pt-2">
+   <div class="card shadow">
     <table class="table" id="book-table">
         <thead class="thead-dark" style="background: black; color: white">
             <tr>
@@ -61,5 +62,6 @@
             @endif
         </tbody>
     </table>
+   </div>
 </div>
 @endsection

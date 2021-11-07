@@ -9,6 +9,7 @@ return [
         'Admission' => 'Admission',
         'Thesis' => 'Thesis',
         'Video' => 'Video',
+        'LessonPlan' => 'Lesson Plan',
         'Guess Papers' => 'Guess Papers',
         // admission categories
         'fee_structure' => 'Fee Structure',
