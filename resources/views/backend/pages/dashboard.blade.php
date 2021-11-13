@@ -12,6 +12,7 @@
     </center>
 </div>
 @endif
+
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <div class="content-header">
@@ -104,9 +105,6 @@
 
 
             <div class="row">
-
-
-
                 <div class="col-lg-3 col-6">
                     <!-- small box -->
                     <div class="small-box bg-danger">
@@ -225,9 +223,25 @@
                                 class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
-
             </div>
+            <hr>
+            <div class="row">
+                <div class="col-lg-3 col-6">
+                    <!-- small box -->
+                    <div class="small-box bg-info">
+                        <div class="inner">
+                            <h3>Add Applications</h3>
 
+                            <p> </p>
+                        </div>
+                        <div class="icon">
+                            <i class="ion ion-bag"></i>
+                        </div>
+                        <a href="#" class="small-box-footer" data-toggle="modal" data-target="#applications">ADD Now<i
+                                class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+            </div>
 
 
             <div class="modal fade" id="books">
@@ -917,7 +931,7 @@
         </div>
 
 
-
+        @include('backend.partials.modals')
 
         <!-- /////////////////////////////////////////////////////////////////// -->
 
@@ -932,5 +946,9 @@
     CKEDITOR.replace( 'link-desc' );
     CKEDITOR.replace( 'noti-desc' );
     CKEDITOR.replace( 'desc-des' );
+    CKEDITOR.replace( 'desc-application' );
+    $(document).ready(function () {
+        $('.select2').select2();
+    });
 </script>
 @stop

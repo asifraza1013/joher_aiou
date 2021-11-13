@@ -31,6 +31,32 @@ class ManageDescriptionsController extends Controller
         if($category == 'tutor_information'){
             $title = 'Tutor Information';
         }
+        if($category == 'plag_checker'){
+            $title = 'Plagerism Checker & Remove';
+            $backRpute = route('practice');
+            $backPage = 'Solve Thesis and Teaching Prectic';
+        }
+        if($category == 'result'){
+            $title = 'Results';
+            $backPage = 'Results';
+            $backRpute = route('results');
+        }
+        if($category == 'date_sheet'){
+            $title = 'Date Sheets';
+            $backPage = 'Results';
+            $backRpute = route('results');
+        }
+        if($category == 'roll_slip'){
+            $title = 'Roll No. Slip';
+            $backPage = 'Results';
+            $backRpute = route('results');
+        }
+        $applicationList = config('constants.application_cate');
+        if(!empty($applicationList[$category])){
+            $title = $applicationList[$category];
+            $backPage = 'Applications';
+            $backRpute = route('applicationform');
+        }
         $description = Description::where('category', $category)->get();
         return view('front.pages.admission-detail',  compact([
             'backRpute',

@@ -1,11 +1,11 @@
 <div class="topbar p-2">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-12">
                 <div class="pull-left">
-                    <span class="info"><a href="#."> Have any question?</a></span>
-                    <span class="info"><i class="icon-phone2"></i>+92 313 0905455</span>
-                    <span class="info"><i class="icon-mail"></i>test@info.com</span>
+                    <span class="info"><a href="{{ route('about') }}"> Have any question?</a></span>
+                    <span class="info"><i class="icon-phone2"></i>0316-4962025</span>
+                    <span class="info"><i class="icon-phone2"></i>0313-0905455</span>
                 </div>
                 {{-- <ul class="social_top pull-right">
                     <li><a href="#."><i class="fa fa-facebook"></i></a></li>
@@ -22,10 +22,8 @@
 ?>
 <!--Header-->
 <header>
-    {{-- {{ (Request::segment(1) == 'index' || Request::segment(1) == null) ? 'no-background' : '' }} --}}
-    <nav class="navbar navbar-default navbar-fixed white bootsnav">
+    <nav class="navbar navbar-default white bootsnav">
         <div class="container">
-            {{-- <div class="search_btn btn_common"><i class="icon-icons185"></i></div> --}}
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                     <i class="fa fa-bars"></i>

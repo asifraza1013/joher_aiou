@@ -16,20 +16,33 @@
 </section>
 <!--Page Header-->
 
-<div class="container bg-light pt-lg-5 pt-2 p-5">
-    <div class="card">
-        <div class="card-body">
-            @if(count($link))
-            @foreach($link as $descriptions)
-            <p>{!!$descriptions->description!!}</p>
-            @if(!empty($descriptions->link))
-            <a href="{{URL::to('')}}/{{$descriptions->link}}" class="btn btn-primary ">Click For Info </a>
-            @endif
-            @endforeach
-            @else
-            <h5 class="red text-center">No Data Found</h5>
-            @endif
+<!-- Courses -->
+<section id="course_all" class="padding-bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-4">
+                <div class="course margin_top wow fadeIn" data-wow-delay="600ms">
+                    <h3 class="bottom10"><a href="">Date Sheets</a></h3>
+                    <p class="bottom20">Click to find more detail.</p>
+                    <a class="btn_common yellow border_radius" href="{{ route('front.admission.detail', 'date_sheet') }}">view details</a>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="course margin_top wow fadeIn" data-wow-delay="500ms">
+                    <h3 class="bottom10"><a href="course_detail.html">Roll No. Slip</a></h3>
+                    <p class="bottom20">Click to find more detail.</p>
+                    <a class="btn_common yellow border_radius" href="{{ route('front.admission.detail', 'roll_slip') }}">view details</a>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="course margin_top wow fadeIn" data-wow-delay="400ms">
+                    <h3 class="bottom10"><a href="">Results</a></h3>
+                    <p class="bottom10">Click to find more detail.</p>
+                    <a class="btn_common yellow border_radius" href="{{ route('front.admission.detail', 'result') }}">view details</a>
+                </div>
+            </div>
         </div>
     </div>
-</div>
+</section>
+<!-- Courses ends -->
 @endsection

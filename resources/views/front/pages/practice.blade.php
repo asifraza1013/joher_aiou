@@ -51,7 +51,7 @@
                                 <p>Solve Teaching Practice Booklet 8607.</p>
                             </div>
                             <div class="testimonial_pic">
-                                <a class="btn_common yellow border_radius" href="{{ url('/teaching') }}">Click For Download 8607</a>
+                                <a class="btn_common yellow border_radius" href="{{ url('/teaching') }}">Click For Download</a>
                             </div>
                         </div>
                     </div>
@@ -62,15 +62,29 @@
                             <div class="testimonial_text text-center">
                                 <a href="http://techzonesit.com/"><i class="icon-books"
                                         style="font-size: 45px;color:#ffb600"></i></a>
-                                <p>Solve Research Project 8613.</p>
+                                <p>Solve Research Project 8613,8675,8657,6464.</p>
                             </div>
                             <div class="testimonial_pic">
-                                <a class="btn_common yellow border_radius" href="{{ url('/research') }}">Click for Download 8613</a>
+                                <a class="btn_common yellow border_radius" href="{{ url('/research') }}">Click for Download</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="cbp-item setting-2">
+                    <div class="cbp-caption-defaultWrap">
+                        <div class="testimonial_wrap">
+                            <div class="testimonial_text text-center">
+                                <a href="{{ route('thesis') }}"><i class="icon-books"
+                                        style="font-size: 45px;color:#ffb600"></i></a>
+                                <p>Plagerism Checker & Remove.</p>
+                            </div>
+                            <div class="testimonial_pic">
+                                <a class="btn_common yellow border_radius" href="{{ route('front.admission.detail', 'plag_checker') }}">Check Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{-- <div class="cbp-item setting-2">
                     <div class="cbp-caption-defaultWrap">
                         <div class="testimonial_wrap">
                             <div class="testimonial_text text-center">
@@ -83,7 +97,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
