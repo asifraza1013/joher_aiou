@@ -39,7 +39,7 @@
 <!--ABout US-->
 <section id="about" class="padding">
     <div class="container">
-        <div class="row">
+        <div class="row desk-view">
             <div class="icon_wrap padding-bottom-half clearfix">
                 <a href="{{ route('admission') }}">
                     <div class="col-sm-4 col-xs-4 icon_box text-center heading_space wow fadeInUp" data-wow-delay="500ms">
@@ -118,6 +118,128 @@
             </div>
         </div>
 
+        <div class="row d-flex mt-lg-0 mobile-view">
+            <a href="{{ route('admission') }}">
+                <div class="col-sm-4 col-xs-4">
+                    <div class="card" style="min-height: 63px">
+                        <div class="car-body text-center wow  fadeInUp" data-wow-delay="500ms">
+                            <i class="fa fa-home fa-2x text text-primary"></i>
+                            <h4 class="bold">Admissions</h4>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="{{ route('front.lms.portal.tab') }}">
+                <div class="col-sm-4 col-xs-4">
+                    <div class="card" style="min-height: 63px">
+                        <div class="car-body text-center wow  fadeInUp" data-wow-delay="500ms">
+                            <i class="icon-camera fa-2x text text-primary"></i>
+                            <h4 class="bold">Aaghi LMS Portal</h4>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="{{ route('books') }}">
+                <div class="col-sm-4 col-xs-4">
+                    <div class="card" style="min-height: 63px">
+                        <div class="car-body text-center wow  fadeInUp" data-wow-delay="500ms">
+                            <i class="icon-books fa-2x text text-primary"></i>
+                            <h4 class="bold">Books & Key Books</h4>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="{{ route('assignment') }}">
+                <div class="col-sm-4 col-xs-4 mt-2">
+                    <div class="card" style="min-height: 63px">
+                        <div class="car-body text-center wow  fadeInUp" data-wow-delay="500ms">
+                            <i class="icon-book fa-2x text text-primary"></i>
+                            <h4 class="bold">Solved Assignments</h4>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="{{ route('guesspaper') }}">
+                <div class="col-sm-4 col-xs-4 mt-2">
+                    <div class="card" style="min-height: 63px">
+                        <div class="car-body text-center wow  fadeInUp" data-wow-delay="500ms">
+                            <i class="icon-globe fa-2x text text-primary"></i>
+                            <h4 class="bold">Past Papers</h4>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="{{ route('videolectures') }}">
+                <div class="col-sm-4 col-xs-4 mt-2">
+                    <div class="card" style="min-height: 63px">
+                        <div class="car-body text-center wow  fadeInUp" data-wow-delay="500ms">
+                            <i class="icon-video fa-2x text text-primary"></i>
+                            <h4 class="bold">Video Lectures</h4>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="{{ route('results') }}">
+                <div class="col-sm-4 col-xs-4 mt-2">
+                    <div class="card" style="min-height: 63px">
+                        <div class="car-body text-center wow  fadeInUp" data-wow-delay="500ms">
+                            <i class="icon-list fa-2x text text-primary"></i>
+                            <h4 class="bold">Examination & Results</h4>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="{{ route('applicationform') }}">
+                <div class="col-sm-4 col-xs-4 mt-2">
+                    <div class="card" style="min-height: 63px">
+                        <div class="car-body text-center wow  fadeInUp" data-wow-delay="500ms">
+                            <i class="icon-layers fa-2x text text-primary"></i>
+                            <h4 class="bold">Application Form</h4>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="{{ route('practice') }}">
+                <div class="col-sm-4 col-xs-4 mt-2">
+                    <div class="card" style="min-height: 63px">
+                        <div class="car-body text-center wow  fadeInUp" data-wow-delay="500ms">
+                            <i class="icon-user fa-2x text text-primary"></i>
+                            <h4 class="bold">Solve Thesis And Teaching Practic</h4>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="{{ route('front.compressor.tab') }}">
+                <div class="col-sm-4 col-xs-4 mt-2">
+                    <div class="card" style="min-height: 63px">
+                        <div class="car-body text-center wow  fadeInUp" data-wow-delay="500ms">
+                            <i class="icon-laptop fa-2x text text-primary"></i>
+                            <h4 class="bold">Compressor</h4>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="{{ route('front.lms.portal.tab') }}">
+                <div class="col-sm-4 col-xs-4 mt-2">
+                    <div class="card" style="min-height: 63px">
+                        <div class="car-body text-center wow  fadeInUp" data-wow-delay="500ms">
+                            <i class="icon-browser fa-2x text text-primary"></i>
+                            <h4 class="bold">Articles</h4>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="{{ route('lessonplan') }}">
+                <div class="col-sm-4 col-xs-4 mt-2 p-2">
+                    <div class="card" style="min-height: 63px">
+                        <div class="car-body text-center wow  fadeInUp" data-wow-delay="500ms">
+                            <i class="icon-browser fa-2x text text-primary"></i>
+                            <h4 class="bold">Lesson Plan</h4>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
     <!-- comment section -->
     @include('layouts.comments')
     </div>

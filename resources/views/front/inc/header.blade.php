@@ -4,8 +4,7 @@
             <div class="col-12">
                 <div class="pull-left">
                     <span class="info"><a href="{{ route('about') }}"> Have any question?</a></span>
-                    <span class="info"><i class="icon-phone2"></i>0316-4962025</span>
-                    <span class="info"><i class="icon-phone2"></i>0313-0905455</span>
+                    <span class="info"><i class="icon-phone2"></i>0316-4962025, 0313-0905455</span>
                 </div>
                 {{-- <ul class="social_top pull-right">
                     <li><a href="#."><i class="fa fa-facebook"></i></a></li>

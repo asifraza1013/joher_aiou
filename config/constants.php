@@ -65,4 +65,10 @@ return [
         'online_exame_app' => 'Online Exame Applications',
         'acedmic_calendar_app' => 'Acedmic Calendar Applications',
     ],
+
+    'total_assignments' => [
+        2 => 'Two Assignments',
+        4 => 'Four Assignments',
+    ],
 ];
+

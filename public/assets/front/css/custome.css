@@ -1884,3 +1884,22 @@
       width: 100%;
     }
   }
+@media (min-width: 768px) {
+    .desk-view{
+        display: block !important;
+    }
+    .mobile-view{
+        display: none !important;
+    }
+}
+@media (max-width: 768px) {
+    .desk-view{
+        display: none !important;
+    }
+    .mobile-view{
+        display: block !important;
+    }
+    #about{
+        padding-top: 15px  !important;
+    }
+}

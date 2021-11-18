@@ -365,6 +365,19 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
+                                    <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Total Assignments')
+                                        }}</label>
+
+                                    <div class="col-md-6">
+                                        <select type="text" class="form-control " name="total_assignment" value="" required
+                                            autofocus>
+                                            @foreach(config('constants.total_assignments') as $key=>$item)
+                                            <option value="{{ $key }}">{{$item}}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
                                     <label for="name" class="col-md-4 col-form-label text-md-right">Submit</label>
 
                                     <div class="col-md-6">
@@ -943,10 +956,17 @@
 <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
 
 <script>
-    CKEDITOR.replace( 'link-desc' );
-    CKEDITOR.replace( 'noti-desc' );
-    CKEDITOR.replace( 'desc-des' );
-    CKEDITOR.replace( 'desc-application' );
+    // Normal ckEditor example code
+    var elements = CKEDITOR.document.find( 'textarea' ),
+        i = 0,
+        element;
+    while (( element = elements.getItem( i++ ) )) {
+        CKEDITOR.replace( element );
+    }
+    // CKEDITOR.replace( 'link-desc' );
+    // CKEDITOR.replace( 'noti-desc' );
+    // CKEDITOR.replace( 'desc-des' );
+    // CKEDITOR.replace( 'desc-application' );
     $(document).ready(function () {
         $('.select2').select2();
     });
