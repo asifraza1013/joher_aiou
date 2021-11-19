@@ -832,15 +832,15 @@ class backend extends Controller
     {
 
 
-        $validatedData =  Validator::make($request->all(), [
-            'img' => 'dimensions:min_height=400,max_height=650'
+        // $validatedData =  Validator::make($request->all(), [
+        //     'img' => 'dimensions:min_height=400,max_height=650'
 
-        ]);
-        if ($validatedData->fails()) {
-            return redirect()->back()
-                ->withErrors($validatedData)
-                ->withInput();
-        }
+        // ]);
+        // if ($validatedData->fails()) {
+        //     return redirect()->back()
+        //         ->withErrors($validatedData)
+        //         ->withInput();
+        // }
 
 
         $banner = new banner();
