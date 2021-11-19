@@ -30,10 +30,6 @@
         </thead>
         <tbody>
             @foreach($assignment as $assignments)
-            @if($assignments->wclass == $class->name )
-
-
-
             @if( $assignments->wclass == 'MATRIC (General, Dars-i Nizami)' || $assignments->wclass == 'INTERMEDIATE (FA,
             ICOM, Dars-i Nizami)' || $assignments->wclass == 'BACHELOR (BA, B.COM, BLIS, Dars-i Nizami)'
             )
@@ -144,7 +140,6 @@
                     Not Included
                 </td>
             </tr>
-            @endif
             @endif
             @endforeach
         </tbody>

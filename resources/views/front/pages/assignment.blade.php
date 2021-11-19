@@ -1,5 +1,8 @@
 @extends('front.layout.app')
 @section('content')
+<style>
+    .nav-tabs{border-bottom:1px solid #dee2e6}.nav-tabs .nav-item{margin-bottom:-1px}.nav-tabs .nav-link{border:1px solid transparent;border-top-left-radius:.25rem;border-top-right-radius:.25rem}.nav-tabs .nav-link:focus,.nav-tabs .nav-link:hover{border-color:#e9ecef #e9ecef #dee2e6}.nav-tabs .nav-link.disabled{color:#6c757d;background-color:transparent;border-color:transparent}.nav-tabs .nav-item.show .nav-link,.nav-tabs .nav-link.active{color:#495057;background-color:#fff;border-color:#dee2e6 #dee2e6 #fff}.nav-tabs.dropdown-menu{margin-top:-1px;border-top-left-radius:0;border-top-right-radius:0}.nav-pills .nav-link{border-radius:.25rem}
+</style>
 <!--Page Header-->
 <section class="page_header padding-top">
     <div class="container">
@@ -29,39 +32,83 @@
     </div>
 </div>
 @endif
+
 <!-- Courses -->
 <section id="course_all" class="padding-bottom">
     <div class="container">
+        <h1 class="text-center">Four Assignment</h1>
         <div class="card shadow  mt-3 mt-lg-5">
-            <table class="table">
-                <thead class="thead-dark">
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Book Name</th>
-                        <th scope="col">Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @if($class)
-                    @foreach ($class as $key=>$item)
-                    @if (!is_null($item) && $item->name)
-                    <tr>
-                        <th scope="row">{{ $key + 1 }}</th>
-                        <td>{{ $item->name }}</td>
-                        <td>
-                            <a class="btn_common yellow border_radius" href="{{ route('alladata', $item->id) }}">Click To Get
-                                Assignment</a>
-                        </td>
-                    </tr>
-                    @endif
-                    @endforeach
-                    @else
-                    <tr class="text-center">
-                        <td colspan="2">No Record Found.</td>
-                    </tr>
-                    @endif
-                </tbody>
-            </table>
+            <div class="four-assignment" style="max-height: 600px;overflow: auto;">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Book Name</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if($class)
+                        @foreach ($class as $key=>$item)
+                        @if (!is_null($item) && $item->name && $item->total_assignment == 4)
+                        <tr>
+                            <th scope="row">{{ $key + 1 }}</th>
+                            <td>{{ $item->name }}</td>
+                            <td>
+                                <a class="btn_common yellow border_radius"
+                                    href="{{ route('alladata', $item->wclass) }}">Click To Get
+                                    Assignment</a>
+                            </td>
+                        </tr>
+                        @endif
+                        @endforeach
+                        @else
+                        <tr class="text-center">
+                            <td colspan="2">No Record Found.</td>
+                        </tr>
+                        @endif
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="course_all" class="padding-bottom mt-lg-5">
+    <div class="container">
+        <h1 class="text-center bold">Four Assignment</h1>
+        <div class="card shadow  mt-3 mt-lg-5">
+            <div class="two-assignment" style="max-height: 600px;overflow: auto;">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Book Name</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if($class)
+                        @foreach ($class as $key=>$item)
+                        @if (!is_null($item) && $item->name && $item->total_assignment == 2)
+                        <tr>
+                            <th scope="row">{{ $key + 1 }}</th>
+                            <td>{{ $item->name }}</td>
+                            <td>
+                                <a class="btn_common yellow border_radius"
+                                    href="{{ route('alladata', $item->wclass) }}">Click To Get
+                                    Assignment</a>
+                            </td>
+                        </tr>
+                        @endif
+                        @endforeach
+                        @else
+                        <tr class="text-center">
+                            <td colspan="2">No Record Found.</td>
+                        </tr>
+                        @endif
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </section>
