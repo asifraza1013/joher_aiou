@@ -33,7 +33,7 @@
     <section class="content">
       <div class="row">
         <div class="col-12">
-          
+
 
           <div class="card">
             <div class="card-header">
@@ -53,28 +53,28 @@
                      <th>Assignment 4</th>
                   <th>Action</th>
 
-                  
+
                 </tr>
                 </thead>
                 <tbody>
-              @foreach($assignment as $assignments) 
-              
+              @foreach($assignment as $assignments)
+
                 <tr>
                     <td>{{$assignments->course_id}}
                   </td>
                   <td>{{$assignments->name}}</td>
                   <td>{{$assignments->wclass}}</td>
-                  
+
                   <td>
                      @if($assignments->a1 == 'null')
-                     
+
                      @if($assignments->link1 == 'null')
                       <a href="" data-toggle="modal" data-target="#updatea1{{$assignments->id}}" class="btn btn-primary">Update </a>
-                      
+
                        @else
                      <a href="{{$assignments->link1}}"  class="btn btn-success">Download Assignment</a>
                       <a href="{{URL::to('')}}/deletel1/{{$assignments->id}}" class="btn btn-danger">Delete</a>
-                     
+
                      @endif
                       @else
 
@@ -85,13 +85,13 @@
                      @if($assignments->a2 == 'null')
                      @if($assignments->link2 == 'null')
                       <a href="" data-toggle="modal" data-target="#updatea2{{$assignments->id}}" class="btn btn-primary">Update </a>
-                      
+
                        @else
                      <a href="{{$assignments->link2}}"  class="btn btn-success">Download Assignment</a>
                       <a href="{{URL::to('')}}/deletel2/{{$assignments->id}}" class="btn btn-danger">Delete</a>
-                     
+
                      @endif
-                      
+
                       @else
 
                   <a href="{{URL::to('')}}/{{$assignments->a2}}" class="btn btn-success">View 2</a>
@@ -104,7 +104,7 @@
                       @else
                      <a href="{{$assignments->link3}}"  class="btn btn-success">Download Assignment</a>
                       <a href="{{URL::to('')}}/deletel3/{{$assignments->id}}" class="btn btn-danger">Delete</a>
-                     
+
                      @endif
                       @else
 
@@ -118,9 +118,9 @@
                        @else
                      <a href="{{$assignments->link4}}"  class="btn btn-success">Download Assignment</a>
                       <a href="{{URL::to('')}}/deletel4/{{$assignments->id}}" class="btn btn-danger">Delete</a>
-                     
+
                      @endif
-                      
+
                       @else
 
                 <a href="{{URL::to('')}}/{{$assignments->a4}}" class="btn btn-success">View 4</a>
@@ -129,7 +129,7 @@
                   <td>
                   <a href="" data-toggle="modal" data-target="#assignments{{$assignments->id}}" class="btn btn-success">Edit</a>
                 <a href="{{URL::to('')}}/deleteassignment/{{$assignments->id}}" class="btn btn-danger">Delete</a></td>
-                  
+
                 </tr>
 
 <div class="modal fade" id="assignments{{$assignments->id}}">
@@ -164,7 +164,7 @@
                                 <input type="text" class="form-control " name="course_id" value="{{$assignments->course_id}}" required  autofocus>
                             </div>
                 </div>
-                
+
                 <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Course Name') }}</label>
 
@@ -203,8 +203,8 @@
                                 <input type="file" class="form-control " name="a4" value="" >
                             </div>
                 </div>
-                
-                
+
+
                  <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Link 1') }}</label>
 
@@ -212,7 +212,7 @@
                                 <input type="text" class="form-control " name="link1" value="" >
                             </div>
                 </div>
-                
+
                  <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Link 2') }}</label>
 
@@ -220,7 +220,7 @@
                                 <input type="text" class="form-control " name="link2" value="" >
                             </div>
                 </div>
-                
+
                  <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Link 3') }}</label>
 
@@ -228,7 +228,7 @@
                                 <input type="text" class="form-control " name="link3" value="" >
                             </div>
                 </div>
-                
+
                  <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Link 4') }}</label>
 
@@ -236,8 +236,8 @@
                                 <input type="text" class="form-control " name="link4" value="" >
                             </div>
                 </div>
-                
-               
+
+
                 <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">Submit</label>
 
@@ -249,7 +249,7 @@
             </div>
             <div class="modal-footer justify-content-between">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              
+
             </div>
           </div>
           <!-- /.modal-content -->
@@ -271,24 +271,24 @@
               <form action="{{URL::TO('')}}/editassignment" method="POST" enctype="multipart/form-data">
                  @csrf
                  <div class="form-group row">
-                            
+
 
                             <div class="col-md-6">
                                 <input type="hidden" class="form-control " name="wclass" value="{{$assignments->wclass}}" required  autofocus>
-                                  
+
                             </div>
                 </div>
                 <div class="form-group row">
                   <input type="hidden" name="id" value="{{$assignments->id}}">
-                           
+
 
                             <div class="col-md-6">
                                 <input type="hidden" class="form-control " name="course_id" value="{{$assignments->course_id}}" required  autofocus>
                             </div>
                 </div>
-                
+
                 <div class="form-group row">
-                            
+
 
                             <div class="col-md-6">
                                 <input type="hidden" class="form-control " name="name" value="{{$assignments->name}}" required  autofocus>
@@ -310,14 +310,14 @@
                 </div>
 
                  <div class="form-group row">
-                            
+
 
                             <div class="col-md-6">
                                 <input type="hidden" class="form-control " name="link2" value="{{$assignments->link2}}" >
                             </div>
                 </div>
                  <div class="form-group row">
-                            
+
 
                             <div class="col-md-6">
                                 <input type="hidden" class="form-control " name="link3" value="{{$assignments->link3}}" >
@@ -325,13 +325,13 @@
                 </div>
 
                  <div class="form-group row">
-                            
+
 
                             <div class="col-md-6">
                                 <input type="hidden" class="form-control " name="link4" value="{{$assignments->link4}}" >
                             </div>
                 </div>
-                
+
                 <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">Submit</label>
 
@@ -343,7 +343,7 @@
             </div>
             <div class="modal-footer justify-content-between">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              
+
             </div>
           </div>
           <!-- /.modal-content -->
@@ -368,24 +368,24 @@
               <form action="{{URL::TO('')}}/editassignment" method="POST" enctype="multipart/form-data">
                  @csrf
                  <div class="form-group row">
-                            
+
 
                             <div class="col-md-6">
                                 <input type="hidden" class="form-control " name="wclass" value="{{$assignments->wclass}}" required  autofocus>
-                                  
+
                             </div>
                 </div>
                 <div class="form-group row">
                   <input type="hidden" name="id" value="{{$assignments->id}}">
-                           
+
 
                             <div class="col-md-6">
                                 <input type="hidden" class="form-control " name="course_id" value="{{$assignments->course_id}}" required  autofocus>
                             </div>
                 </div>
-                
+
                 <div class="form-group row">
-                            
+
 
                             <div class="col-md-6">
                                 <input type="hidden" class="form-control " name="name" value="{{$assignments->name}}" required  autofocus>
@@ -408,14 +408,14 @@
                 </div>
 
                  <div class="form-group row">
-                            
+
 
                             <div class="col-md-6">
                                 <input type="hidden" class="form-control " name="link1" value="{{$assignments->link1}}" >
                             </div>
                 </div>
                  <div class="form-group row">
-                            
+
 
                             <div class="col-md-6">
                                 <input type="hidden" class="form-control " name="link3" value="{{$assignments->link3}}" >
@@ -423,14 +423,14 @@
                 </div>
 
                  <div class="form-group row">
-                            
+
 
                             <div class="col-md-6">
                                 <input type="hidden" class="form-control " name="link4" value="{{$assignments->link4}}" >
                             </div>
                 </div>
-                
-                
+
+
                 <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">Submit</label>
 
@@ -442,7 +442,7 @@
             </div>
             <div class="modal-footer justify-content-between">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              
+
             </div>
           </div>
           <!-- /.modal-content -->
@@ -468,24 +468,24 @@
               <form action="{{URL::TO('')}}/editassignment" method="POST" enctype="multipart/form-data">
                  @csrf
                  <div class="form-group row">
-                            
+
 
                             <div class="col-md-6">
                                 <input type="hidden" class="form-control " name="wclass" value="{{$assignments->wclass}}" required  autofocus>
-                                  
+
                             </div>
                 </div>
                 <div class="form-group row">
                   <input type="hidden" name="id" value="{{$assignments->id}}">
-                           
+
 
                             <div class="col-md-6">
                                 <input type="hidden" class="form-control " name="course_id" value="{{$assignments->course_id}}" required  autofocus>
                             </div>
                 </div>
-                
+
                 <div class="form-group row">
-                            
+
 
                             <div class="col-md-6">
                                 <input type="hidden" class="form-control " name="name" value="{{$assignments->name}}" required  autofocus>
@@ -508,14 +508,14 @@
                 </div>
 
                  <div class="form-group row">
-                            
+
 
                             <div class="col-md-6">
                                 <input type="hidden" class="form-control " name="link2" value="{{$assignments->link2}}" >
                             </div>
                 </div>
                  <div class="form-group row">
-                            
+
 
                             <div class="col-md-6">
                                 <input type="hidden" class="form-control " name="link1" value="{{$assignments->link1}}" >
@@ -523,14 +523,14 @@
                 </div>
 
                  <div class="form-group row">
-                            
+
 
                             <div class="col-md-6">
                                 <input type="hidden" class="form-control " name="link4" value="{{$assignments->link4}}" >
                             </div>
                 </div>
-                
-                
+
+
                 <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">Submit</label>
 
@@ -542,7 +542,7 @@
             </div>
             <div class="modal-footer justify-content-between">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              
+
             </div>
           </div>
           <!-- /.modal-content -->
@@ -566,24 +566,24 @@
               <form action="{{URL::TO('')}}/editassignment" method="POST" enctype="multipart/form-data">
                  @csrf
                  <div class="form-group row">
-                            
+
 
                             <div class="col-md-6">
                                 <input type="hidden" class="form-control " name="wclass" value="{{$assignments->wclass}}" required  autofocus>
-                                  
+
                             </div>
                 </div>
                 <div class="form-group row">
                   <input type="hidden" name="id" value="{{$assignments->id}}">
-                           
+
 
                             <div class="col-md-6">
                                 <input type="hidden" class="form-control " name="course_id" value="{{$assignments->course_id}}" required  autofocus>
                             </div>
                 </div>
-                
+
                 <div class="form-group row">
-                            
+
 
                             <div class="col-md-6">
                                 <input type="hidden" class="form-control " name="name" value="{{$assignments->name}}" required  autofocus>
@@ -606,14 +606,14 @@
                 </div>
 
                  <div class="form-group row">
-                            
+
 
                             <div class="col-md-6">
                                 <input type="hidden" class="form-control " name="link2" value="{{$assignments->link2}}" >
                             </div>
                 </div>
                  <div class="form-group row">
-                            
+
 
                             <div class="col-md-6">
                                 <input type="hidden" class="form-control " name="link3" value="{{$assignments->link3}}" >
@@ -621,15 +621,15 @@
                 </div>
 
                  <div class="form-group row">
-                            
+
 
                             <div class="col-md-6">
                                 <input type="hidden" class="form-control " name="link1" value="{{$assignments->link1}}" >
                             </div>
                 </div>
-                
-                
-                
+
+
+
                 <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">Submit</label>
 
@@ -641,7 +641,7 @@
             </div>
             <div class="modal-footer justify-content-between">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              
+
             </div>
           </div>
           <!-- /.modal-content -->
@@ -685,3 +685,4 @@
   </div>
   <!-- /.content-wrapper -->
  @stop
+

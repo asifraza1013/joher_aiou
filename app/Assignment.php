@@ -17,8 +17,8 @@ class Assignment extends Authenticatable
      */
     protected $fillable = [
       'course_id' , 'name', 'category', 'wclass','a1','a2','a3','a4','link1',
-      'link2','link3','link4',
+      'link2','link3','link4', 'total_assignment'
     ];
 
-     
+
 }

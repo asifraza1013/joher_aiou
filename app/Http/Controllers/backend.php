@@ -343,6 +343,7 @@ class backend extends Controller
         $assignment->wclass = $request->wclass;
         $assignment->course_id = $request->course_id;
         $assignment->name = $request->name;
+        $assignment->total_assignment = $request->total_assignment;
 
         $assignment->save();
         return redirect()->back();
@@ -846,7 +847,7 @@ class backend extends Controller
         $banner = new banner();
         $banner->title = $request->title;
         $img = time() . '.' . $request->img->getClientOriginalExtension();
-        $destination = "public/img/";
+        $destination = "img/";
         $banner->img = $request->img->move($destination, $img);
         $banner->save();
         return redirect()->back();
@@ -971,10 +972,10 @@ class backend extends Controller
     public function alladata($id)
     {
 
-        $class = addclass::find($id);
-        $assignment = assignment::all();
+        // $class = addclass::find($id);
+        $assignment = assignment::where('wclass', $id)->get();
         $description = addlink::where('category', 'Assignments')->get();
-        return view('front.pages.all-assignments', compact('class', 'assignment', 'description'));
+        return view('front.pages.all-assignments', compact('assignment', 'description'));
     }
     public function alltdata($id)
     {

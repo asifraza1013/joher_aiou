@@ -69,11 +69,8 @@ class front extends Controller
 
     public function assignment()
     {
-        $class = addclass::
-        where('name', '!=', 'Research Project')
-        ->where('name', '!=', 'Teaching Practice')
-        ->get();
-        $description = addlink::where('category', 'Books')->get();
+        $class = Assignment::get();
+        $description = addlink::where('category', 'Assignments')->get();
         return view('front.pages.assignment', compact("class", 'description'));
     }
     public function guesspaper()
