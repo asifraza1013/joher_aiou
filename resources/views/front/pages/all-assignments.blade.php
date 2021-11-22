@@ -29,118 +29,35 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($assignment as $assignments)
-            @if( $assignments->wclass == 'MATRIC (General, Dars-i Nizami)' || $assignments->wclass == 'INTERMEDIATE (FA,
-            ICOM, Dars-i Nizami)' || $assignments->wclass == 'BACHELOR (BA, B.COM, BLIS, Dars-i Nizami)'
-            )
-            <tr>
-
-                <td>{{$assignments->course_id}}</td>
-                <td>{{$assignments->name}}</td>
-                <td>
-                    @if($assignments->a1 == 'null')
-
-                    @if($assignments->link1 == 'null')
-
-                    Not Uploaded
-
+            @foreach($assignment as $item)
+               <tr>
+                   <td>{{ $item->course_id }}</td>
+                   <td>{{ $item->name }}</td>
+                   <td>
+                       @if($item->link1 == 'null')
+                       <span class="red">Not Uploaded</span>
+                       @else
+                        <a href="{{ $item->link1 }}"><u>assignment 1</u></a>
+                       @endif
+                   </td>
+                   <td>
+                    @if($item->link2  == 'null')
+                    <span class="red">Not Uploaded</span>
                     @else
-                    <a href="{{$assignments->link1}}" class="btn btn-primary">Download Assignment 1</a>
+                     <a href="{{ $item->link2 }}"><u>assignment 2</u></a>
                     @endif
-                    @else <a href="{{URL::to('')}}/{{$assignments->a1}}" class="btn btn-primary">Download Assignment
-                        1</a>
+                   </td>
+                   <td>
+                    @if($item->link3 != 'null')
+                    <a href="{{ $item->link3 }}"><u>assignment 3</u></a>
                     @endif
-
-                </td>
-                <td>
-                    @if($assignments->a2 == 'null' )
-
-                    @if($assignments->link2 == 'null')
-
-                    Not Uploaded
-
-                    @else
-                    <a href="{{$assignments->link2}}" class="btn btn-primary">Download Assignment 2</a>
+                   </td>
+                   <td>
+                    @if($item->link4 != 'null')
+                    <a href="{{ $item->link4 }}"><u>assignment 4</u></a>
                     @endif
-
-                    @else <a href="{{URL::to('')}}/{{$assignments->a2}}" class="btn btn-primary">Download Assignment
-                        2</a>
-                    @endif
-                <td>
-                    @if($assignments->a3 == 'null' )
-
-
-                    @if($assignments->link3 == 'null')
-
-                    Not Uploaded
-
-                    @else
-                    <a href="{{$assignments->link3}}" class="btn btn-primary">Download Assignment 3</a>
-                    @endif
-
-                    @else <a href="{{URL::to('')}}/{{$assignments->a3}}" class="btn btn-primary">Download Assignment
-                        3</a>
-                    @endif
-                <td>
-                    @if($assignments->a4 == 'null' )
-                    @if($assignments->link4 == 'null')
-
-                    Not Uploaded
-
-                    @else
-                    <a href="{{$assignments->link4}}" class="btn btn-primary">Download Assignment 4</a>
-                    @endif
-
-                    @else <a href="{{URL::to('')}}/{{$assignments->a4}}" class="btn btn-primary">Download Assignment
-                        4</a>
-
-                    @endif
-                </td>
-            </tr>
-            @else
-            <tr>
-
-                <td>{{$assignments->course_id}}</td>
-                <td>{{$assignments->name}}</td>
-                <td>
-                    @if($assignments->a1 == 'null')
-                    @if($assignments->link1 == 'null')
-
-                    Not Uploaded
-
-                    @else
-                    <a href="{{$assignments->link1}}" class="btn btn-primary">Download Assignment</a>
-                    @endif
-
-                    @else <a href="{{URL::to('')}}/{{$assignments->a1}}" class="btn btn-primary">Download Assignment
-                        1</a>
-                    @endif
-
-                </td>
-                <td>
-                    @if($assignments->a2 == 'null')
-                    @if($assignments->link2 == 'null')
-
-                    Not Uploaded
-
-                    @else
-                    <a href="{{$assignments->link2}}" class="btn btn-primary">Download Assignment</a>
-                    @endif
-
-                    @else <a href="{{URL::to('')}}/{{$assignments->a2}}" class="btn btn-primary">Download Assignment
-                        1</a>
-                    @endif
-
-                </td>
-                <td>
-                    Not Included
-
-                </td>
-                <td>
-                    Not Included
-                </td>
-            </tr>
-            @endif
+                   </td>
+                </tr>
             @endforeach
         </tbody>
     </table>
