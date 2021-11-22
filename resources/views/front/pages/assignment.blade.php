@@ -36,24 +36,24 @@
 <!-- Courses -->
 <section id="course_all" class="padding-bottom">
     <div class="container">
-        <h1 class="text-center">Four Assignment</h1>
+        <h1 class="text-center">Two Assignment</h1>
         <div class="card shadow  mt-3 mt-lg-5">
             <div class="four-assignment" style="max-height: 600px;overflow: auto;">
                 <table class="table">
                     <thead class="thead-dark">
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Book Name</th>
+                            <th scope="col">Class Name</th>
                             <th scope="col">Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         @if($class)
                         @foreach ($class as $key=>$item)
-                        @if (!is_null($item) && $item->name && $item->total_assignment == 4)
+                        @if (is_null($item->link3) && is_null($item->link4))
                         <tr>
                             <th scope="row">{{ $key + 1 }}</th>
-                            <td>{{ $item->name }}</td>
+                            <td>{{ $item->wclass }}</td>
                             <td>
                                 <a class="btn_common yellow border_radius"
                                     href="{{ route('alladata', $item->wclass) }}">Click To Get
@@ -89,10 +89,10 @@
                     <tbody>
                         @if($class)
                         @foreach ($class as $key=>$item)
-                        @if (!is_null($item) && $item->name && $item->total_assignment == 2)
+                        @if (!is_null($item->link3) && !is_null($item->link4))
                         <tr>
                             <th scope="row">{{ $key + 1 }}</th>
-                            <td>{{ $item->name }}</td>
+                            <td>{{ $item->wclass }}</td>
                             <td>
                                 <a class="btn_common yellow border_radius"
                                     href="{{ route('alladata', $item->wclass) }}">Click To Get
