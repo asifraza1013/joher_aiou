@@ -20,6 +20,7 @@ use App\Reply;
 use Artisan;
 
 use Auth;
+use Illuminate\Support\Facades\Crypt;
 
 class backend extends Controller
 {
@@ -973,7 +974,7 @@ class backend extends Controller
     {
 
         // $class = addclass::find($id);
-        $assignment = assignment::where('wclass', $id)
+        $assignment = assignment::where('wclass', Crypt::decrypt($id))
         ->orderBy('course_id', 'DESC')
         ->get();
         $description = addlink::where('category', 'Assignments')->get();

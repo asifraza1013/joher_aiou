@@ -36,7 +36,6 @@
 <!-- Courses -->
 <section id="course_all" class="padding-bottom">
     <div class="container">
-        <h1 class="text-center">Two Assignment</h1>
         <div class="card shadow  mt-3 mt-lg-5">
             <div class="four-assignment" style="max-height: 600px;overflow: auto;">
                 <table class="table">
@@ -48,58 +47,23 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @php
+                            $count = 0;
+                        @endphp
                         @if($class)
                         @foreach ($class as $key=>$item)
-                        @if ($item->link3 == 'null' && $item->link4 == 'null')
+                        @php
+                            $count += 1;
+                        @endphp
                         <tr>
-                            <th scope="row">{{ $key + 1 }}</th>
+                            <th scope="row">{{ $count }}</th>
                             <td>{{ $item->wclass }}</td>
                             <td>
                                 <a class="btn_common yellow border_radius"
-                                    href="{{ route('alladata', $item->wclass) }}">Click To Get
+                                    href="{{ route('alladata', Crypt::encrypt($item->wclass)) }}">Click To Get
                                     Assignment</a>
                             </td>
                         </tr>
-                        @endif
-                        @endforeach
-                        @else
-                        <tr class="text-center">
-                            <td colspan="2">No Record Found.</td>
-                        </tr>
-                        @endif
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="course_all" class="padding-bottom mt-lg-5">
-    <div class="container">
-        <h1 class="text-center bold">Four Assignment</h1>
-        <div class="card shadow  mt-3 mt-lg-5">
-            <div class="two-assignment" style="max-height: 600px;overflow: auto;">
-                <table class="table">
-                    <thead class="thead-dark">
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Book Name</th>
-                            <th scope="col">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @if($class)
-                        @foreach ($class as $key=>$item)
-                        @if ($item->link3 != 'null' && $item->link4 != 'null')
-                        <tr>
-                            <th scope="row">{{ $key + 1 }}</th>
-                            <td>{{ $item->wclass }}</td>
-                            <td>
-                                <a class="btn_common yellow border_radius"
-                                    href="{{ route('alladata', $item->wclass) }}">Click To Get
-                                    Assignment</a>
-                            </td>
-                        </tr>
-                        @endif
                         @endforeach
                         @else
                         <tr class="text-center">
