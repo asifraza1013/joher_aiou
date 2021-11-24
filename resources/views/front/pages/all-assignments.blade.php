@@ -18,7 +18,7 @@
 
 <div class="container pt-lg-5 pt-2">
     <h2 for="" class="bold text-center m-2">Two Assignments</h2>
-    <div class="table-block" style="max-height: 500px; overflow: auto">
+    <div class="table-block">
         <table class="table" id="book-table">
             <thead class="thead-dark" style="background: black; color: white">
                 <tr>
@@ -71,7 +71,7 @@
 <hr class="mt-3">
 <div class="container pt-lg-5 pt-2">
     <h2 for="" class="bold text-center m-2">Four Assignments</h2>
-    <div class="table-block" style="max-height: 500px; overflow: auto">
+    <div class="table-block">
         <table class="table" id="book-table">
             <thead class="thead-dark" style="background: black; color: white">
                 <tr>
