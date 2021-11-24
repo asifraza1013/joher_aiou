@@ -69,7 +69,7 @@ class front extends Controller
 
     public function assignment()
     {
-        $class = Assignment::get();
+        $class = Assignment::all()->unique('wclass');
         $description = addlink::where('category', 'Assignments')->get();
         return view('front.pages.assignment', compact("class", 'description'));
     }

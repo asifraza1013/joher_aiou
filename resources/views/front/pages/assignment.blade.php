@@ -50,7 +50,7 @@
                     <tbody>
                         @if($class)
                         @foreach ($class as $key=>$item)
-                        @if (is_null($item->link3) && is_null($item->link4))
+                        @if ($item->link3 == 'null' && $item->link4 == 'null')
                         <tr>
                             <th scope="row">{{ $key + 1 }}</th>
                             <td>{{ $item->wclass }}</td>
@@ -89,7 +89,7 @@
                     <tbody>
                         @if($class)
                         @foreach ($class as $key=>$item)
-                        @if (!is_null($item->link3) && !is_null($item->link4))
+                        @if ($item->link3 != 'null' && $item->link4 != 'null')
                         <tr>
                             <th scope="row">{{ $key + 1 }}</th>
                             <td>{{ $item->wclass }}</td>
