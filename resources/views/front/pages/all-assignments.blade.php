@@ -1,5 +1,14 @@
 @extends('front.layout.app')
 @section('content')
+<style>
+    td{
+        padding: 3px !important;
+        line-height: 1 !important;
+        font-size: 12px !important;
+        vertical-align: top !important;
+        border-top: 1px solid #ddd !important;
+    }
+</style>
 <!--Page Header-->
 <section class="page_header padding-top">
     <div class="container">
@@ -18,7 +27,7 @@
 
 <div class="container pt-lg-5 pt-2">
     <h2 for="" class="bold text-center m-2">Two Assignments</h2>
-    <div class="table-block" style="max-height: 500px; overflow: auto">
+    <div class="table-block">
         <table class="table" id="book-table">
             <thead class="thead-dark" style="background: black; color: white">
                 <tr>
@@ -71,7 +80,7 @@
 <hr class="mt-3">
 <div class="container pt-lg-5 pt-2">
     <h2 for="" class="bold text-center m-2">Four Assignments</h2>
-    <div class="table-block" style="max-height: 500px; overflow: auto">
+    <div class="table-block">
         <table class="table" id="book-table">
             <thead class="thead-dark" style="background: black; color: white">
                 <tr>

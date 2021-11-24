@@ -975,7 +975,7 @@ class backend extends Controller
 
         // $class = addclass::find($id);
         $assignment = assignment::where('wclass', Crypt::decrypt($id))
-        ->orderBy('course_id', 'DESC')
+        ->orderBy('course_id', 'ASC')
         ->get();
         $description = addlink::where('category', 'Assignments')->get();
         return view('front.pages.all-assignments', compact('assignment', 'description'));
