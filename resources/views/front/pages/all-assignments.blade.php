@@ -8,6 +8,13 @@
         vertical-align: top !important;
         border-top: 1px solid #ddd !important;
     }
+    th{
+        padding: 3px !important;
+        line-height: 1 !important;
+        font-size: 8px !important;
+        vertical-align: top !important;
+        border-top: 1px solid #ddd !important;
+    }
 </style>
 <!--Page Header-->
 <section class="page_header padding-top">
