@@ -37,7 +37,7 @@
 <section id="course_all" class="padding-bottom">
     <div class="container">
         <div class="card shadow  mt-3 mt-lg-5">
-            <div class="four-assignment" style="max-height: 600px;overflow: auto;">
+            <div class="four-assignment">
                 <table class="table">
                     <thead class="thead-dark">
                         <tr>
