@@ -29,9 +29,9 @@ return [
         'compressor' => 'Compressor',
 
         // results
-        'result' => 'Result',
+        // 'result' => 'Result',
         'date_sheet' => 'Date Sheet',
-        'roll_slip' => 'Roll No. Slip',
+        // 'roll_slip' => 'Roll No. Slip',
     ],
     'application_cate' => [
         'change_pic_app' => 'Application for change of picture',

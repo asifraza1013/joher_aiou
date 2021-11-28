@@ -704,6 +704,11 @@
     }
   }
 
+  @media (max-width: 768px) {
+    .margin_top{
+      margin-top: 15px !important;
+    }
+  }
   @media (min-width: 768px) {
     .m-md-0 {
       margin: 0 !important;
@@ -1902,4 +1907,20 @@
     #about{
         padding-top: 15px  !important;
     }
+}
+@media (max-width: 768px) {
+  td{
+    padding: 3px !important;
+    line-height: 1 !important;
+    font-size: 12px !important;
+    vertical-align: top !important;
+    border-top: 1px solid #ddd !important;
+  }
+  th{
+    padding: 3px !important;
+    line-height: 1 !important;
+    font-size: 8px !important;
+    vertical-align: top !important;
+    border-top: 1px solid #ddd !important;
+  }
 }

@@ -17,6 +17,7 @@ use App\Reply;
 use App\Theses;
 use Artisan;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class front extends Controller
 {
@@ -57,8 +58,7 @@ class front extends Controller
         where('name', '!=', 'Research Project')
         ->where('name', '!=', 'Teaching Practice')
         ->select()->get();
-        $description = addlink::where('category', 'Books')->get();
-        return view('front.pages.books', compact("class", 'description'));
+        return view('front.pages.books', compact("class"));
     }
 
     public function applicationform()
@@ -69,9 +69,21 @@ class front extends Controller
 
     public function assignment()
     {
-        $class = Assignment::all()->unique('wclass');
+        $class = Assignment::
+        // orderBy('id')
+        select(['wclass'])
+        ->distinct()
+        ->get();
+
+        // ->unique('wclass');
+        $uclass = [
+            'MATRIC (General, Dars-i Nizami)' => 'MATRIC (General, Dars-i Nizami)',
+            'INTERMEDIATE (FA, ICOM, Dars-i Nizami)' => 'INTERMEDIATE (FA, ICOM, Dars-i Nizami)',
+            'BACHELOR (BA, B.COM, BLIS, Dars-i Nizami)' => 'BACHELOR (BA, B.COM, BLIS, Dars-i Nizami)',
+            'M.A URDU' => 'M.A URDU'
+        ];
         $description = addlink::where('category', 'Assignments')->get();
-        return view('front.pages.assignment', compact("class", 'description'));
+        return view('front.pages.assignment', compact("class", 'description', 'uclass'));
     }
     public function guesspaper()
     {

@@ -54,11 +54,11 @@
                         @if($guesses->link == 'null')
                         Not Uploaded
                         @else
-                        <a href="{{$guesses->link}}" class="btn btn-primary">Download </a>
+                        <a href="{{$guesses->link}}" class="text-primary">Download </a>
                         @endif
                         @else
 
-                        <a href="{{URL::to('')}}/{{$guesses->pdffile}}" class="btn btn-primary">Download </a>
+                        <a href="{{URL::to('')}}/{{$guesses->pdffile}}" class="text-primary">Download </a>
                         @endif</td>
 
                     <td>
@@ -68,10 +68,10 @@
                         Not Uploaded
 
                         @else
-                        <a href="{{$guesses->link1}}" class="btn btn-primary">Download </a>
+                        <a href="{{$guesses->link1}}" class="text-primary">Download </a>
                         @endif
                         @else
-                        <a href="{{URL::to('')}}/{{$guesses->pdffile1}}" class="btn btn-primary">Download </a>
+                        <a href="{{URL::to('')}}/{{$guesses->pdffile1}}" class="text-primary">Download </a>
                         @endif</td>
                 </tr>
                 @endforeach

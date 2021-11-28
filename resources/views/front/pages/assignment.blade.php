@@ -51,7 +51,24 @@
                             $count = 0;
                         @endphp
                         @if($class)
+                        @foreach ($uclass as $key=>$item)
+                        @php
+                            $count += 1;
+                        @endphp
+                        <tr>
+                            <th scope="row">{{ $count }}</th>
+                            <td>{{ $item }}</td>
+                            <td>
+                                <a class="btn_common yellow border_radius"
+                                    href="{{ route('alladata', Crypt::encrypt($item)) }}">Click To Get
+                                    Assignment</a>
+                            </td>
+                        </tr>
+                        @endforeach
+
+
                         @foreach ($class as $key=>$item)
+                        @if(!array_key_exists($item->wclass, $uclass))
                         @php
                             $count += 1;
                         @endphp
@@ -64,6 +81,7 @@
                                     Assignment</a>
                             </td>
                         </tr>
+                        @endif
                         @endforeach
                         @else
                         <tr class="text-center">
