@@ -16,6 +16,20 @@
     </div>
 </section>
 <!--Page Header-->
+@if(count($description))
+<div class="container bg-light pt-lg-5 pt-2 p-5">
+    <div class="card">
+        <div class="card-body">
+            @foreach($description as $descriptions)
+            <p>{!!$descriptions->description!!}</p>
+            @if(!empty($descriptions->link))
+            <a href="{{URL::to('')}}/{{$descriptions->link}}" class="btn btn-primary ">Click For Info </a>
+            @endif
+            @endforeach
+        </div>
+    </div>
+</div>
+@endif
 
 <div class="container pt-lg-5 pt-2">
     <div class="card shadow mt-lg-5 mt-3">
@@ -39,10 +53,10 @@
                         @if($books->link1 == 'null')
                         Not Uploaded
                         @else
-                        <a href="{{$books->link1}}" class="btn btn-primary">Download Book</a>
+                        <a href="{{$books->link1}}" class="text-primary">Download Book</a>
                         @endif
                         @else
-                        <a href="{{URL::to('')}}/{{$books->pdffile}}" class="btn btn-primary">Download Book</a>
+                        <a href="{{URL::to('')}}/{{$books->pdffile}}" class="text-primary">Download Book</a>
                         @endif
                     </td>
                     <td>
@@ -50,10 +64,10 @@
                         @if($books->link2 == 'null')
                         Not Uploaded
                         @else
-                        <a href="{{$books->link2}}" class="btn btn-primary">Download Book</a>
+                        <a href="{{$books->link2}}" class="text-primary">Download Book</a>
                         @endif
                         @else
-                        <a href="{{URL::to('')}}/{{$books->pdffile1}}" class="btn btn-primary">Download Book</a>
+                        <a href="{{URL::to('')}}/{{$books->pdffile1}}" class="text-primary">Download Book</a>
                         @endif</td>
                 </tr>
                 @endif
