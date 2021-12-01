@@ -9,7 +9,7 @@
             @foreach ($banner as $key=>$item)
             <li data-transition="fade">
                 <!-- MAIN IMAGE -->
-                <img src="{{ asset($item->img) }}" alt="" data-bgposition="center center" data-bgfit="cover"
+                <img src="{{ asset($item->img) }}" alt="" data-bgposition="center center" data-bgfit="contain"
                     data-bgparallax="10" class="rev-slidebg">
                 <!-- LAYER NR. 1 -->
                 @if ($item->title)
