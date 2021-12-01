@@ -83,8 +83,27 @@
       "autoWidth": false,
     });
   });
+  
 </script>
+<!-- /.content-wrapper -->
+<script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
 
+<script>
+    // Normal ckEditor example code
+    var elements = CKEDITOR.document.find( 'textarea' ),
+        i = 0,
+        element;
+    while (( element = elements.getItem( i++ ) )) {
+        CKEDITOR.replace( element );
+    }
+    // CKEDITOR.replace( 'link-desc' );
+    // CKEDITOR.replace( 'noti-desc' );
+    // CKEDITOR.replace( 'desc-des' );
+    // CKEDITOR.replace( 'desc-application' );
+    $(document).ready(function () {
+        $('.select2').select2();
+    });
+</script>
 {{-- <script>
     tinymce.init({
       selector: 'textarea',
