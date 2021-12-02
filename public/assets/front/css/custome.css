@@ -1896,6 +1896,12 @@
     .mobile-view{
         display: none !important;
     }
+    .banner-m{
+      margin-top: 85px !important;
+    }
+    .slider-h{
+      height: 400px  !important;
+    }
 }
 @media (max-width: 768px) {
     .desk-view{
@@ -1922,5 +1928,8 @@
     font-size: 8px !important;
     vertical-align: top !important;
     border-top: 1px solid #ddd !important;
+  }
+  .mobile-h{
+    height: 150px !important;
   }
 }
