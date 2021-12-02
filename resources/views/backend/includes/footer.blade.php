@@ -86,24 +86,31 @@
   
 </script>
 <!-- /.content-wrapper -->
-<script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
-
+{{-- <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script> --}}
 <script>
     // Normal ckEditor example code
-    var elements = CKEDITOR.document.find( 'textarea' ),
-        i = 0,
-        element;
-    while (( element = elements.getItem( i++ ) )) {
-        CKEDITOR.replace( element );
-    }
+    // var elements = CKEDITOR.document.find( 'textarea' ),
+    //     i = 0,
+    //     element;
+    // while (( element = elements.getItem( i++ ) )) {
+    //     CKEDITOR.replace( element );
+    // }
     // CKEDITOR.replace( 'link-desc' );
     // CKEDITOR.replace( 'noti-desc' );
     // CKEDITOR.replace( 'desc-des' );
     // CKEDITOR.replace( 'desc-application' );
-    $(document).ready(function () {
-        $('.select2').select2();
-    });
+   
 </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="{{asset('assets/editor/editor.js')}}"></script>
+    <script>
+        $(document).ready(function() {
+            $("#edescription").Editor();
+            $("#eaddLink").Editor();
+            $("#enotification").Editor();
+        });
+    </script>
+    <link href="{{asset('assets/editor/editor.css')}}" type="text/css" rel="stylesheet"/>
 {{-- <script>
     tinymce.init({
       selector: 'textarea',
