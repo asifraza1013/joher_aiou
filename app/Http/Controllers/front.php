@@ -82,8 +82,7 @@ class front extends Controller
             'BACHELOR (BA, B.COM, BLIS, Dars-i Nizami)' => 'BACHELOR (BA, B.COM, BLIS, Dars-i Nizami)',
             'M.A URDU' => 'M.A URDU'
         ];
-        $description = addlink::where('category', 'Assignments')->get();
-        return view('front.pages.assignment', compact("class", 'description', 'uclass'));
+        return view('front.pages.assignment', compact("class", 'uclass'));
     }
     public function guesspaper()
     {

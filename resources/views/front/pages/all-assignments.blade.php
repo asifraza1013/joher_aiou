@@ -17,7 +17,20 @@
     </div>
 </section>
 <!--Page Header-->
-
+@if(count($description))
+<div class="container bg-light pt-lg-5 pt-2 p-5">
+    <div class="card">
+        <div class="card-body">
+            @foreach($description as $descriptions)
+            <p>{!!$descriptions->description!!}</p>
+            @if(!empty($descriptions->link))
+            <a href="{{URL::to('')}}/{{$descriptions->link}}" class="btn btn-primary ">Click For Info </a>
+            @endif
+            @endforeach
+        </div>
+    </div>
+</div>
+@endif
 <div class="container pt-lg-5 pt-2">
     <h2 for="" class="bold text-center m-2">Two Assignments</h2>
     <div class="table-block">

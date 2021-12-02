@@ -46,7 +46,7 @@
                     <div class="cbp-caption-defaultWrap">
                         <div class="testimonial_wrap">
                             <div class="testimonial_text text-center">
-                                <a href="http://techzonesit.com/"><i class="icon-books"
+                                <a href="{{ url('/teaching') }}"><i class="icon-books"
                                         style="font-size: 45px;color:#ffb600"></i></a>
                                 <p>Solve Teaching Practice Booklet 8607.</p>
                             </div>
@@ -60,7 +60,7 @@
                     <div class="cbp-caption-defaultWrap">
                         <div class="testimonial_wrap">
                             <div class="testimonial_text text-center">
-                                <a href="http://techzonesit.com/"><i class="icon-books"
+                                <a href="{{ url('/research') }}"><i class="icon-books"
                                         style="font-size: 45px;color:#ffb600"></i></a>
                                 <p>Solve Research Project 8613,8675,8657,6464.</p>
                             </div>
@@ -74,7 +74,7 @@
                     <div class="cbp-caption-defaultWrap">
                         <div class="testimonial_wrap">
                             <div class="testimonial_text text-center">
-                                <a href="{{ route('thesis') }}"><i class="icon-books"
+                                <a href="{{ route('front.admission.detail', 'plag_checker') }}"><i class="icon-books"
                                         style="font-size: 45px;color:#ffb600"></i></a>
                                 <p>Plagerism Checker & Remove.</p>
                             </div>

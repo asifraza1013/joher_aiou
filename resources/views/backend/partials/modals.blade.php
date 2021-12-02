@@ -15,7 +15,7 @@
                             }}</label>
 
                         <textarea type="text" class="form-control desc-application" name="description" value="" required
-                            autofocus id="desc-application"> </textarea>
+                            autofocus id="edescription"> </textarea>
                     </div>
 
 

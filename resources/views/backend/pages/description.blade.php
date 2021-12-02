@@ -74,7 +74,7 @@
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Description') }}</label>
 
                             <div class="col-md-6">
-                                <textarea type="text" class="form-control " name="description" value="" required  autofocus>{{$descriptions->description}} </textarea>
+                                <textarea type="text" class="form-control " name="description" value="" id="edescription" required  autofocus>{{$descriptions->description}} </textarea>
                             </div>
                 </div>
 

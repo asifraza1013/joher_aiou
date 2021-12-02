@@ -564,7 +564,7 @@
                                 <label for="name" class="col-form-label text-md-right">{{ __('Description ')
                                     }}</label>
 
-                            <textarea type="text" class="form-control link-desc" name="description" value="" id="link-desc" required
+                            <textarea type="text" class="form-control txtEditor link-desc" name="description" value="" id="eaddLink" required
                                 autofocus> </textarea>
                             </div>
 
@@ -672,7 +672,7 @@
                                 <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Notification ')
                                     }}</label>
                                  <textarea type="text" class="form-control noti-desc" name="noti" value="" required
-                                 autofocus id="noti-desc"> </textarea>
+                                 autofocus id="enotification"> </textarea>
                             </div>
 
                             <div class="form-group">
@@ -836,7 +836,7 @@
                                     }}</label>
 
                                 <textarea type="text" class="form-control desc-des" name="description" value="" required
-                                    autofocus id="desc-des"> </textarea>
+                                    autofocus id="edescription"> </textarea>
                             </div>
 
 
@@ -953,7 +953,7 @@
 <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
-<script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
+{{-- <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
 
 <script>
     // Normal ckEditor example code
@@ -970,5 +970,5 @@
     $(document).ready(function () {
         $('.select2').select2();
     });
-</script>
+</script> --}}
 @stop

@@ -981,7 +981,7 @@ class backend extends Controller
         ->get();
         $happyHour = \collect($assignment);
         $assignment = $assignment->sortBy('course_id');
-        $description = addlink::where('category', 'Assignments')->get();
+        $description = Description::where('category', 'Assignments')->get();
         return view('front.pages.all-assignments', compact('assignment', 'description'));
     }
     public function alltdata($id)
