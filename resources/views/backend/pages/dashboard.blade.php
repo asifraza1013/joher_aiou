@@ -591,7 +591,7 @@
 
                             <div class="form-group row">
                                 <label for="name" class="col-form-label text-md-right">Submit</label>
-                                <input type="submit" class="form-control btn btn-success " name="pdffile" value=""
+                                <input type="submit" class="form-control btn btn-success add-link" name="pdffile" value=""
                                         required autofocus>
                             </div>
                         </form>
@@ -690,7 +690,7 @@
 
                             <div class="form-group">
                                 <label for="name" class="col-md-4 col-form-label text-md-right">Submit</label>
-                                <input type="submit" class="form-control btn btn-success " name="" value="" required
+                                <input type="submit" class="form-control btn btn-success add-notifications " name="" value="" required
                                     autofocus>
                             </div>
                         </form>
@@ -855,7 +855,7 @@
 
                             <div class="form-group">
                                 <label for="name" class="col-md-4 col-form-label text-md-right">Submit</label>
-                                <input type="submit" class="form-control btn btn-success " name="pdffile"
+                                <input type="submit" class="form-control btn btn-success add-description " name="pdffile"
                                     value="Submit" required autofocus>
                             </div>
                         </form>
@@ -970,5 +970,9 @@
     $(document).ready(function () {
         $('.select2').select2();
     });
+</script> --}}
+{{-- <script src="{{URL::TO('')}}/backassets/plugins/jquery/jquery.min.js"></script>
+<script>
+
 </script> --}}
 @stop

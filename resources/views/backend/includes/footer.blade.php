@@ -111,6 +111,19 @@
         });
     </script>
     <link href="{{asset('assets/editor/editor.css')}}" type="text/css" rel="stylesheet"/>
+
+    <script>
+        $('.add-description').on('click', function(){
+          $('#edescription').val($("#edescription").Editor("getText"))
+        })
+
+        $('.add-link').on('click', function(){
+            $('#eaddLink').val($("#eaddLink").Editor("getText"))
+        })
+        $('.add-notifications').on('click', function(){
+            $('#enotification').val($("#enotification").Editor("getText"))
+        })
+    </script>
 {{-- <script>
     tinymce.init({
       selector: 'textarea',
