@@ -39,6 +39,18 @@
                 <p class=" address"><i class="icon-phone"></i>0313-0905455</p>
                 {{-- <p class=" address"><i class="icon-mail"></i><a href="mailto:Edua@info.com">test@info.com</a></p> --}}
                 <img src="{{ asset('img/footer-map.png') }}" alt="we are here" class="img-responsive">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9779744540969113"
+                     crossorigin="anonymous"></script>
+                <!-- Horizontal for Footer -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-9779744540969113"
+                     data-ad-slot="3540132096"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
             </div>
         </div>
     </div>

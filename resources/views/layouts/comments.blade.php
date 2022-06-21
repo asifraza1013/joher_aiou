@@ -20,6 +20,19 @@
             </form>
         </div>
         <hr>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9779744540969113"
+                     crossorigin="anonymous"></script>
+        <!-- Horizontal for Footer -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-9779744540969113"
+             data-ad-slot="3540132096"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        <hr>
         @if(count($comments))
         <div class="row" style="max-height: 800px; overflow: auto;">
         @foreach ($comments as $cmnt)

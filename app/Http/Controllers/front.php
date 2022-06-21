@@ -67,11 +67,12 @@ class front extends Controller
         return view('front.pages.application-form ', compact("link"));
     }
 
-    public function assignment()
+   public function assignment()
     {
+        $allclass = Addclass::pluck('name');
         $class = Assignment::
-        // orderBy('id')
-        select(['wclass'])
+        whereIn('wclass', $allclass)
+        ->select(['wclass'])
         ->distinct()
         ->get();
 

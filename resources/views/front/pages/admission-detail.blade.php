@@ -16,7 +16,7 @@
 </section>
 <!--Page Header-->
 <div class="container bg-light pt-lg-5 pt-2 p-5">
-    <div class="card">
+    <div class="card" style="font-family: system-ui;">
         <div class="card-body">
             @if(count($description))
             @foreach($description as $descriptions)
@@ -31,4 +31,16 @@
         </div>
     </div>
 </div>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9779744540969113"
+     crossorigin="anonymous"></script>
+<!-- Square Adds -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9779744540969113"
+     data-ad-slot="1859384769"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 @endsection

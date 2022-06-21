@@ -16,7 +16,7 @@
 </section>
 <!--Page Header-->
 <div class="container bg-light pt-lg-5 pt-2 p-5">
-    <div class="card">
+    <div class="card" style="font-family: system-ui;">
         <div class="card-body">
             @if(count($description))
             @foreach($description as $descriptions)

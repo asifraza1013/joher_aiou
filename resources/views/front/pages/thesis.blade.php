@@ -18,7 +18,7 @@
 
 @if(count($description))
 <div class="container bg-light pt-lg-5 pt-2 p-5">
-    <div class="card">
+    <div class="card" style="font-family: system-ui;">
         <div class="card-body">
             @foreach($description as $descriptions)
             <p>{!!$descriptions->description!!}</p>

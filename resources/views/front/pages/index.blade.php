@@ -9,7 +9,7 @@
             @foreach ($banner as $key=>$item)
             <li data-transition="fade">
                 <!-- MAIN IMAGE -->
-                <img src="{{ asset($item->img) }}" alt="" data-bgposition="top" data-bgfit="contain"
+                <img src="{{URL::TO('')}}/{{$item->img}}" alt="" data-bgposition="top" data-bgfit="contain"
                     data-bgparallax="10" class="rev-slidebg banner-m" >
                 <!-- LAYER NR. 1 -->
                 @if ($item->title)
@@ -43,76 +43,93 @@
             <div class="icon_wrap padding-bottom-half clearfix">
                 <a href="{{ route('admission') }}">
                     <div class="col-sm-4 col-xs-4 icon_box text-center heading_space wow fadeInUp" data-wow-delay="500ms">
-                        <i class="icon-home"></i>
+                        <i class="fa fa-home"></i>
                         <h4 class="text-capitalize bottom20 margin10">Admissions</h4>
                     </div>
                 </a>
                 <a href="{{ route('front.lms.portal.tab') }}">
                     <div class="col-sm-4 col-xs-4 icon_box text-center heading_space wow fadeInUp" data-wow-delay="500ms">
-                    <i class="icon-camera"></i>
+                    <i class="fa fa-camera"></i>
                     <h4 class="text-capitalize bottom20 margin10">Aaghi LMS Portal</h4>
                 </div>
                 </a>
                 <a href="{{ route('books') }}">
                     <div class="col-sm-4 col-xs-4 icon_box text-center heading_space wow fadeInUp" data-wow-delay="500ms">
-                    <i class="icon-books"></i>
+                    <i class="fa fa-book
+                    "></i>
                     <h4 class="text-capitalize bottom20 margin10">Books & Key Books</h4>
                 </div>
                 </a>
                 <a href="{{ route('assignment') }}">
                     <div class="col-sm-4 col-xs-4 icon_box text-center heading_space wow fadeInUp" data-wow-delay="500ms">
-                    <i class="icon-book"></i>
+                    <i class="fa fa-books"></i>
                     <h4 class="text-capitalize bottom20 margin10">Solved Assignments</h4>
                     {{-- <p class="no_bottom">Free Download all programs Spring 2021 Solve Assignment in PDF.</p> --}}
                 </div>
                 </a>
                 <a href="{{ route('guesspaper') }}">
                     <div class="col-sm-4 col-xs-4 icon_box text-center heading_space wow fadeInUp" data-wow-delay="500ms">
-                    <i class="icon-globe"></i>
+                    <i class="fa fa-globe"></i>
                     <h4 class="text-capitalize bottom20 margin10">Past Papers</h4>
                     {{-- <p class="no_bottom">Free Download Solved Semester Terminal Exam (STE) Autumn 2020.</p> --}}
                 </div>
                 </a>
                 <a href="{{ route('videolectures') }}">
                     <div class="col-sm-4 col-xs-4 icon_box text-center heading_space wow fadeInUp" data-wow-delay="500ms">
-                    <i class="icon-video"></i>
+                    <i class="fa fa-camera"></i>
                     <h4 class="text-capitalize bottom20 margin10">Video Lectures</h4>
                 </div>
                 </a>
                 <a href="{{ route('results') }}">
                     <div class="col-sm-4 col-xs-4 icon_box text-center heading_space wow fadeInUp" data-wow-delay="500ms">
-                    <i class="icon-list"></i>
+                    <i class="fa fa-list"></i>
                     <h4 class="text-capitalize bottom20 margin10">Examination & Results</h4>
                 </div>
                 </a>
                 <a href="{{ route('applicationform') }}">
                     <div class="col-sm-4 col-xs-4 icon_box text-center heading_space wow fadeInUp" data-wow-delay="500ms">
-                    <i class="icon-layers"></i>
+                    <i class="fa fa-align-center"></i>
                     <h4 class="text-capitalize bottom20 margin10">Application Form</h4>
                 </div>
                 </a>
                 <a href="{{ route('practice') }}">
                     <div class="col-sm-4 col-xs-4 icon_box text-center heading_space wow fadeInUp" data-wow-delay="500ms">
-                    <i class="icon-user"></i>
+                    <i class="fa fa-align-left"></i>
                     <h4 class="text-capitalize bottom20 margin10">Solve Thesis And Teaching Practic</h4>
                 </div>
                 </a>
                 <a href="{{ route('front.compressor.tab') }}">
                     <div class="col-sm-4 col-xs-4 icon_box text-center heading_space wow fadeInUp" data-wow-delay="500ms">
-                    <i class="icon-laptop"></i>
+                    <i class="fa fa-align-right"></i>
                     <h4 class="text-capitalize bottom20 margin10">Compressor</h4>
                 </div>
                 </a>
                 <a href="{{ route('front.lms.portal.tab') }}">
                     <div class="col-sm-4 col-xs-4 icon_box text-center heading_space wow fadeInUp" data-wow-delay="500ms">
-                    <i class="icon-browser"></i>
+                    <i class="fa fa-tv"></i>
                     <h4 class="text-capitalize bottom20 margin10">Articles</h4>
                 </div>
                 </a>
                 <a href="{{ route('lessonplan') }}">
                 <div class="col-sm-4 col-xs-4 icon_box text-center heading_space wow fadeInUp" data-wow-delay="500ms">
-                    <i class="icon-browser"></i>
+                    <i class="fa fa-book"></i>
                     <h4 class="text-capitalize bottom20 margin10">Lesson Plan</h4>
+                </div>
+                </a>
+                <a href="">
+                <div class="col-sm-12 col-xs-12 icon_box text-center heading_space wow fadeInUp" data-wow-delay="500ms">
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9779744540969113"
+                         crossorigin="anonymous"></script>
+                    <!-- Square Adds -->
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-9779744540969113"
+                         data-ad-slot="1859384769"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
                 </div>
                 </a>
             </div>
@@ -123,7 +140,7 @@
                 <div class="col-sm-4 col-xs-4">
                     <div class="card" style="min-height: 63px">
                         <div class="car-body text-center wow  fadeInUp" data-wow-delay="500ms">
-                            <i class="fa fa-home fa-2x text text-primary"></i>
+                            <i class="fa fa-home fa-1x text text-primary"></i>
                             <h4 class="bold">Admissions</h4>
                         </div>
                     </div>
@@ -133,7 +150,7 @@
                 <div class="col-sm-4 col-xs-4">
                     <div class="card" style="min-height: 63px">
                         <div class="car-body text-center wow  fadeInUp" data-wow-delay="500ms">
-                            <i class="icon-camera fa-2x text text-primary"></i>
+                            <i class="fa fa-camera fa-1x text text-primary"></i>
                             <h4 class="bold">Aaghi LMS Portal</h4>
                         </div>
                     </div>
@@ -143,7 +160,7 @@
                 <div class="col-sm-4 col-xs-4">
                     <div class="card" style="min-height: 63px">
                         <div class="car-body text-center wow  fadeInUp" data-wow-delay="500ms">
-                            <i class="icon-books fa-2x text text-primary"></i>
+                            <i class="fa fa-book fa-1x text text-primary"></i>
                             <h4 class="bold">Books & Key Books</h4>
                         </div>
                     </div>
@@ -153,7 +170,7 @@
                 <div class="col-sm-4 col-xs-4 mt-2">
                     <div class="card" style="min-height: 63px">
                         <div class="car-body text-center wow  fadeInUp" data-wow-delay="500ms">
-                            <i class="icon-book fa-2x text text-primary"></i>
+                            <i class="fa fa-books fa-1x text text-primary"></i>
                             <h4 class="bold">Solved Assignments</h4>
                         </div>
                     </div>
@@ -163,7 +180,7 @@
                 <div class="col-sm-4 col-xs-4 mt-2">
                     <div class="card" style="min-height: 63px">
                         <div class="car-body text-center wow  fadeInUp" data-wow-delay="500ms">
-                            <i class="icon-globe fa-2x text text-primary"></i>
+                            <i class="fa fa-globe fa-1x text text-primary"></i>
                             <h4 class="bold">Past Papers</h4>
                         </div>
                     </div>
@@ -173,7 +190,7 @@
                 <div class="col-sm-4 col-xs-4 mt-2">
                     <div class="card" style="min-height: 63px">
                         <div class="car-body text-center wow  fadeInUp" data-wow-delay="500ms">
-                            <i class="icon-video fa-2x text text-primary"></i>
+                            <i class="fa fa-camera fa-1x text text-primary"></i>
                             <h4 class="bold">Video Lectures</h4>
                         </div>
                     </div>
@@ -183,7 +200,7 @@
                 <div class="col-sm-4 col-xs-4 mt-2">
                     <div class="card" style="min-height: 63px">
                         <div class="car-body text-center wow  fadeInUp" data-wow-delay="500ms">
-                            <i class="icon-list fa-2x text text-primary"></i>
+                            <i class="fa fa-list fa-1x text text-primary"></i>
                             <h4 class="bold">Examination & Results</h4>
                         </div>
                     </div>
@@ -193,7 +210,7 @@
                 <div class="col-sm-4 col-xs-4 mt-2">
                     <div class="card" style="min-height: 63px">
                         <div class="car-body text-center wow  fadeInUp" data-wow-delay="500ms">
-                            <i class="icon-layers fa-2x text text-primary"></i>
+                            <i class="fa fa-align-center fa-1x text text-primary"></i>
                             <h4 class="bold">Application Form</h4>
                         </div>
                     </div>
@@ -203,7 +220,7 @@
                 <div class="col-sm-4 col-xs-4 mt-2">
                     <div class="card" style="min-height: 63px">
                         <div class="car-body text-center wow  fadeInUp" data-wow-delay="500ms">
-                            <i class="icon-user fa-2x text text-primary"></i>
+                            <i class="fa fa-align-left fa-1x text text-primary"></i>
                             <h4 class="bold">Solve Thesis And Teaching Practic</h4>
                         </div>
                     </div>
@@ -213,7 +230,7 @@
                 <div class="col-sm-4 col-xs-4 mt-2">
                     <div class="card" style="min-height: 63px">
                         <div class="car-body text-center wow  fadeInUp" data-wow-delay="500ms">
-                            <i class="icon-laptop fa-2x text text-primary"></i>
+                            <i class="fa fa-align-right fa-1x text text-primary"></i>
                             <h4 class="bold">Compressor</h4>
                         </div>
                     </div>
@@ -223,7 +240,7 @@
                 <div class="col-sm-4 col-xs-4 mt-2">
                     <div class="card" style="min-height: 63px">
                         <div class="car-body text-center wow  fadeInUp" data-wow-delay="500ms">
-                            <i class="icon-browser fa-2x text text-primary"></i>
+                            <i class="fa fa-tv fa-1x text text-primary"></i>
                             <h4 class="bold">Articles</h4>
                         </div>
                     </div>
@@ -233,8 +250,28 @@
                 <div class="col-sm-4 col-xs-4 mt-2 p-2">
                     <div class="card" style="min-height: 63px">
                         <div class="car-body text-center wow  fadeInUp" data-wow-delay="500ms">
-                            <i class="icon-browser fa-2x text text-primary"></i>
+                            <i class="fa fa-book fa-1x text text-primary"></i>
                             <h4 class="bold">Lesson Plan</h4>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="col-sm-12 col-xs-12 mt-2 p-2">
+                    <div class="card" style="min-height: 63px">
+                        <div class="car-body text-center wow  fadeInUp" data-wow-delay="500ms">
+                            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9779744540969113"
+                                 crossorigin="anonymous"></script>
+                            <!-- Square Adds -->
+                            <ins class="adsbygoogle"
+                                 style="display:block"
+                                 data-ad-client="ca-pub-9779744540969113"
+                                 data-ad-slot="1859384769"
+                                 data-ad-format="auto"
+                                 data-full-width-responsive="true"></ins>
+                            <script>
+                                 (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
                         </div>
                     </div>
                 </div>

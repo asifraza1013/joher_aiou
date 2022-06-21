@@ -19,7 +19,7 @@
 <!--Page Header-->
 @if(count($description))
 <div class="container bg-light pt-lg-5 pt-2 p-5">
-    <div class="card">
+    <div class="card" style="font-family: system-ui;">
         <div class="card-body">
             @foreach($description as $descriptions)
             <p>{!!$descriptions->description!!}</p>
@@ -31,6 +31,18 @@
     </div>
 </div>
 @endif
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9779744540969113"
+     crossorigin="anonymous"></script>
+<!-- Square Adds -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9779744540969113"
+     data-ad-slot="1859384769"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 <div class="container pt-lg-5 pt-2">
     <h2 for="" class="bold text-center m-2">Two Assignments</h2>
     <div class="table-block">

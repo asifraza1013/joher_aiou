@@ -2,22 +2,22 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700|Source+Sans+Pro:300,400,600,700');
 
 
-@font-face {
-    font-family: 'museo_slab500';
-    src: url('../fonts/museo_slab_0-webfont.woff2') format('woff2'),
-         url('../fonts/museo_slab_0-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+/*@font-face {*/
+/*    font-family: 'museo_slab500';*/
+/*    src: url('../fonts/museo_slab_0-webfont.woff2') format('woff2'),*/
+/*         url('../fonts/museo_slab_0-webfont.woff') format('woff');*/
+/*    font-weight: normal;*/
+/*    font-style: normal;*/
 
-}
-@font-face {
-    font-family: 'museo_slab700';
-    src: url('../fonts/museo_slab_1-webfont.woff2') format('woff2'),
-         url('../fonts/museo_slab_1-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+/*}*/
+/*@font-face {*/
+/*    font-family: 'museo_slab700';*/
+/*    src: url('../fonts/museo_slab_1-webfont.woff2') format('woff2'),*/
+/*         url('../fonts/museo_slab_1-webfont.woff') format('woff');*/
+/*    font-weight: normal;*/
+/*    font-style: normal;*/
 
-}
+/*}*/
 
 /* CSS Document */
 /*Table of Content
