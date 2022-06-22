@@ -70,7 +70,7 @@
                                 <div class="col-sm-4 col-lg-4 icon_box text-center heading_space wow fadeInUp" data-wow-delay="400ms">
                                     <i class="fa fa-whatsapp"></i>
                                     <h4 class="text-capitalize bottom20 margin10">Whatsapp</h4>
-                                    <p>0316-4962025 / 0313-0905455</p>
+                                    <p>0316-4962025</p>
                                 </div>
                                 </a>
                                 <a href="#">

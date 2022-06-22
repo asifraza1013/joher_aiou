@@ -116,6 +116,12 @@
                     <h4 class="text-capitalize bottom20 margin10">Lesson Plan</h4>
                 </div>
                 </a>
+                <a href="https://enrollment.aiou.edu.pk/psp/prod/?cmd=login&languageCd=ENG&" target="_blank">
+                <div class="col-sm-4 col-xs-4 icon_box text-center heading_space wow fadeInUp" data-wow-delay="500ms">
+                    <i class="fa fa-lock"></i>
+                    <h4 class="text-capitalize bottom20 margin10">CMS Portal</h4>
+                </div>
+                </a>
                 <a href="">
                 <div class="col-sm-12 col-xs-12 icon_box text-center heading_space wow fadeInUp" data-wow-delay="500ms">
                     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9779744540969113"

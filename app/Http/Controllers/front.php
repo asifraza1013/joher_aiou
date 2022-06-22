@@ -140,7 +140,9 @@ class front extends Controller
     }
     public function  lessonplan()
     {
-        $lesson = lesson::all();
+        $lesson = lesson::orderBy('course_id')
+        ->orderBy('name')
+        ->get();
         $description = addlink::where('category', 'LessonPlan')->get();
         return view('front.pages.lessonplan', compact("lesson", 'description'));
     }

@@ -967,7 +967,7 @@ class backend extends Controller
     {
 
         $class = addclass::find($id);
-        $book = book::get();
+        $book = book::orderBy('course_id')->get();
         $description = addlink::where('category', 'Books')->get();
         return view('front.pages.all-books', compact('class', 'book', 'description'));
     }

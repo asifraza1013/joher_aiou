@@ -47,7 +47,7 @@
               @foreach($addlink as $addlinks) 
                
                 <tr>
-                  <td>{{$addlinks->description}}</td>
+                  <td>{!!$addlinks->description!!}</td>
                   <td>{{$addlinks->link}}
                   </td>
                    <td>{{$addlinks->link1}}
@@ -77,8 +77,10 @@
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Description') }}</label>
 
                             <div class="col-md-6">
-                                <textarea type="text" class="form-control " name="description" value="" id="eaddLink" required  autofocus>
-                                    {{$addlinks->description}} </textarea>
+                                <textarea type="text" class="form-control " name="description" rows="10" value="" id="eaddLink" required val  autofocus>
+                                  {{-- {{ html_entity_decode($addlinks->description) }}  --}}
+                                  <?php echo "$addlinks->description"; ?>
+                                </textarea>
                             </div>
                 </div>
                 
@@ -86,14 +88,14 @@
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Link 1') }}</label>
 
                             <div class="col-md-6">
-                                <input type="text" class="form-control " name="link" value="{{$addlinks->link}}" required  autofocus>
+                                <input type="text" class="form-control " name="link" value="{{$addlinks->link}}"  autofocus>
                             </div>
                 </div>
                   <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Link 2') }}</label>
 
                             <div class="col-md-6">
-                                <input type="text" class="form-control " name="link1" value="{{$addlinks->link1}}" required  autofocus>
+                                <input type="text" class="form-control " name="link1" value="{{$addlinks->link1}}"  autofocus>
                             </div>
                 </div>
                 <div class="form-group row">

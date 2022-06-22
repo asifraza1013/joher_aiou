@@ -11,10 +11,10 @@
                 <p>We give proper guidance and counselling through this platforms. And in this website we give free of cost All Programs solve Original Books, Key Books, Solve Assignment, and complete Videos tutorials about from taking Admission to get degree from university.</p>
                 <ul class="social_icon top25">
                     <li><a href="https://www.facebook.com/AIOUStudentsandTutorsHelpDesk/" class="facebook"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#." class="twitter"><i class="icon-twitter4"></i></a></li>
-                    <li><a href="https://youtube.com/channel/UCaOu2WbAoxRpM596YtRcvvg" class="dribble"><i class="fa fa-youtubse"></i></a></li>
-                    <li><a href="#." class="instagram"><i class="icon-instagram"></i></a></li>
-                    <li><a href="#." class="vimo"><i class="icon-vimeo4"></i></a></li>
+                    <li><a href="https://wa.me/message/5WR2YZGLMRLCM1" class="twitter"><i class="fa fa-whatsapp"></i></a></li>
+                    <li><a href="https://youtube.com/channel/UCaOu2WbAoxRpM596YtRcvvg" class="dribble"><i class="fa fa-youtube"></i></a></li>
+                    <li><a href="instagram.com/numanusamakhan" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                    {{-- <li><a href="#" class="vimo"><i class="fa fa-fac"></i></a></li> --}}
                 </ul>
             </div>
             <div class="col-md-4 col-sm-4 footer_panel bottom25">
@@ -25,7 +25,7 @@
                     <li><a href="{{ route('books') }}"><i class="icon-chevron-small-right"></i>Books</a></li>
                     <li><a href="{{ route('assignment') }}"><i class="icon-chevron-small-right"></i>Assignments</a></li>
                     <li><a href="{{ route('thesis') }}"><i class="icon-chevron-small-right"></i>Thesis</a></li>
-                    <li><a href="{{ route('practice') }}"><i class="icon-chevron-small-right"></i>Solved Thesis & Teaching Practice</a></li>
+                    <li><a href="{{ route('practice') }}"><i class="icon-chevron-small-right"></i>Thesis & Teaching Practice</a></li>
                     <li><a href="{{ route('lessonplan') }}"><i class="icon-chevron-small-right"></i>Lesson Plan</a></li>
                     <li><a href="{{ route('videolectures') }}"><i class="icon-chevron-small-right"></i>Video Lecture</a></li>
                     <li><a href="{{ route('guesspaper') }}"><i class="icon-chevron-small-right"></i>Past Papers</a></li>
@@ -36,7 +36,7 @@
                 <h3 class="heading bottom25">Keep in Touch <span class="divider-left"></span></h3>
                 <p class=" address"><i class="fa fa-user"></i>Numan Usama Khan</p>
                 <p class=" address"><i class="icon-phone"></i>0316-4962025</p>
-                <p class=" address"><i class="icon-phone"></i>0313-0905455</p>
+                {{-- <p class=" address"><i class="icon-phone"></i>0313-0905455</p> --}}
                 {{-- <p class=" address"><i class="icon-mail"></i><a href="mailto:Edua@info.com">test@info.com</a></p> --}}
                 <img src="{{ asset('img/footer-map.png') }}" alt="we are here" class="img-responsive">
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9779744540969113"
