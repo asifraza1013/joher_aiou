@@ -107,7 +107,7 @@ class front extends Controller
     public function teaching()
     {
         $thesis = theses::where('course_id', '8607')->paginate();
-        $description = addlink::where('category', 'Teaching Practice')->get();
+        $description = addlink::where('category', '8607')->get();
         return view('front.pages.teaching', compact("thesis", 'description'));
     }
     public function research()

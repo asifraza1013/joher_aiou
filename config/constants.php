@@ -11,6 +11,8 @@ return [
         'LessonPlan' => 'Lesson Plan',
         'Guess Papers' => 'Guess Papers',
         'plag_checker' => 'Plagerism Checker & Remove',
+        '8607' => '8607',
+        '8613' => '8613',
 
 
         // admission categories
