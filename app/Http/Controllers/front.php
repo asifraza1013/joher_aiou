@@ -106,13 +106,15 @@ class front extends Controller
     }
     public function teaching()
     {
-        $thesis = theses::where('course_id', '8607')->paginate();
-        $description = addlink::where('category', '8607')->get();
+        $list = ['8607','6498','6415'];
+        $thesis = theses::whereIn('course_id', $list)->paginate();
+        $description = addlink::where('category', $list)->get();
         return view('front.pages.teaching', compact("thesis", 'description'));
     }
     public function research()
     {
-        $thesis = theses::where('course_id', '8613')->get();
+        $list = ['8613','8675','8657','6464'];
+        $thesis = theses::where('course_id', $list)->get();
         $description = addlink::where('category', 'Research Project')->get();
         return view('front.pages.research', compact("thesis", 'description'));
     }
